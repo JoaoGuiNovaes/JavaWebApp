@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+header{
+    background-color: #a79468d2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100px;
+}
+
+img.header{
+    display: inline-block;
+}
+
+#home{
+    height: 64px;
+    margin-left: 20px;
+}
+
+#logo{
+    width: 450px;
+    margin: 0 auto;
+}
+
+#user{
+    height: 64px;
+    margin-right: 20px;
+}
+
+#processos{
+    background-color: #8b7960e5;
+    display: flex;
+}
+
+main{
+    background-color: #8f8263b4;
+    display: block;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+h1{
+    color: white;
+    padding-left: 5px;
+    
+}
+
+#tijolo{
+    width: 100px;
+    border-radius: 30px;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+.td-img{
+    background-color: rgba(219, 216, 216, 0.514);
+    border-radius: 30px;
+    width: 130px;
+    height: 85px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.tr-items { 
+    height: 100px; 
+}
+#argamassa{
+    width: 100px;
+    border-radius: 30px;
+}
+
+.titulo{
+    display: flex;
+}
+
+p{
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+hr{
+    border-color: grey;
+}
+
+.pagamento{
+    display: flex;
+}
+
+select{
+    height: 30px;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: #f7e4b254;
+    border-color: #f7e4b254;
+}
+
+.detalhe-pagamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinhar ao topo */
+}
+
+.detalhes-esquerda {
+    flex-grow: 1;
+}
+
+.detalhes-direita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinhar à direita */
+    margin-left: auto; /* Move para a direita */
+}
+
+.frete, .subtotal-produto, .valor-total {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.valor-total{
+    background-color: #bdbcbc6e;
+    height: 35px; /* Defina a altura desejada, como 25px */
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+}
+
+.preco{
+    color: black;
+}
+
+.finalizar {
+    margin-right: 0;
+}
+
+/* Estilo CSS para o subtítulo */
+.subtotal-produto > p {
+    margin-right: 10px; /* Adiciona um espaço à direita do texto */
+}
+
+button {
+    margin-top: 10%;
+    margin-left: 10px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+
+.barra-progresso {
+    width: 100%;
+    background-color:rgba(122, 106, 83, 0.87);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.step::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    z-index: 2;
+}
+
+.step:first-child::before {
+    background-color: #ccc; /* Primeira etapa concluída */
+}
+
+.step:last-child::before {
+    background-color: #ccc; /* Última etapa não concluída */
+}
+
+/* Texto abaixo dos círculos */
+.step-text {
+    color: #ccc;
+}
+
+/* Linhas entre os pontos */
+.linha {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #4CAF50;
+    top: 50%;
+    z-index: 1;
+}
+
+.step:nth-child(1) .linha {
+    left: 50%;
+}
+
+.step:nth-child(2) .linha {
+    left: 50.5%;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+    header{
+        width: 100vw;
+    }
+    main{
+        width: 100vw;
+        height: 100vh;
+        padding: 0px;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .barra-progresso {
+        width: 100vw;
+    }
+
+    .detalhe-pagamento {
+        display: block;
+    }
+    .detalhes-esquerda {
+        flex-grow: 1;
+    }
+    
+    .detalhes-direita {
+        display: block;
+        flex-direction: row;
+    }
+
+    #user{
+        display: none;
+    }
+
+    .titulo > img{
+        display: none;
+    }
+
+    #logo{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #home{
+        height: 32px;
+        margin-left: 20px;
+    }
+}

@@ -1,0 +1,184 @@
+main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo {
+    height: 400px;
+    width: 400px;
+}
+
+.esquerda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 34vw;
+    flex-direction: column;
+    background-color: #7a6a53;
+}
+
+.logo {
+    margin-right: 10%;
+    width: 130%;
+    height: 125%;
+}
+
+
+.card:hover {
+    box-shadow: 0px 0px 50px 0px rgba(18, 33, 51, 0.247);
+}
+
+.direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 66vw;
+    background-color: #c0c0c0
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 73%;
+    padding: 10px;
+    align-items: center;
+    width: 45%;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition: .5s ease-in;
+    background-color: #d6d6d6;
+    overflow: auto;
+}
+
+
+
+h1 {
+    margin-top: 5%;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+
+label {
+    margin-bottom: 3%;
+    margin-top: 3%;
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.icon {
+    position: relative;
+    right: 6px;
+    width: 6%;
+}
+
+form {
+    flex: 1;
+    height: 80%;
+    margin-top: 7%;
+    width: 80%;
+}
+
+.input-group {
+    position: relative;
+    right: 32px;
+}
+
+.form-control {
+    border: 0.2px solid #bdbdbd;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.divbutton {
+    width: 100%;
+    display: flex;
+}
+
+button {
+    margin-top: 10%;
+    margin-left: 10px;
+    width: 50%
+}
+
+.btn-light {
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 943px) {
+    main {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .direita {
+        width: 100vw;
+        height: 82vh;
+    }
+
+    .esquerda {
+        width: 100vw;
+        height: 18vh;
+    }
+
+    .logo {
+        height: auto;
+        width: auto;
+    }
+
+    form {
+        margin-top: 1%;
+        width: 80%;
+        height: 60%;
+        border: 0, 4px solid black;
+    }
+
+    .card {
+        padding: 15px;
+        flex-wrap: wrap;
+        width: 70vw;
+        height: 60vh;
+        align-items: center;
+        overflow: auto;
+    }
+
+
+    .card:hover {
+        box-shadow: none;
+    }
+
+    .form-control {
+        width: 100%;
+        height: 25px;
+
+    }
+
+    h1 {
+        font-size: 30px;
+        font-family: 'Anton', sans-serif;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 7%;
+    }
+
+
+}
+@media screen and (max-width: 414px) {
+main{
+    width: 100%;
+    height: 100vh;
+}
+}
