@@ -1,7 +1,6 @@
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    height: 100%;
     
 }
 header{
@@ -42,7 +41,6 @@ main{
     display: block;
     padding-left: 100px;
     padding-right: 100px;
-    height: 100%;
 }
 
 h1{
