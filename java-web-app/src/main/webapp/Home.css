@@ -49,7 +49,7 @@ main {
     display: block;
     padding-left: 100px;
     padding-right: 100px;
-    height: 65vw;
+    min-height: 65vw;
 }
 
 footer {
@@ -83,7 +83,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -94,7 +94,7 @@ footer {
     gap: 80px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 100px;
 }
 
@@ -166,13 +166,13 @@ footer {
 
     main {
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         padding: 0px;
     }
 
     body {
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .header-logo {
@@ -199,7 +199,7 @@ footer {
         width: 100vw;
         grid-template-columns: repeat(4, 1fr);
         /* 2 colunas em telas menores */
-        overflow-x: auto;
+        overflow-x: scroll;
         /* Habilitar rolagem horizontal */
         white-space: nowrap;
         /* Impedir quebras de linha */
