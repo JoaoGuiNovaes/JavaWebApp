@@ -41,6 +41,7 @@ main{
     display: block;
     padding-left: 100px;
     padding-right: 100px;
+    height: 100%;
 }
 
 h1{
@@ -235,7 +236,7 @@ button {
     }
     main{
         width: 100%;
-        padding: 0px;        
+        padding: 10px;        
     }
     body{
         width: 100vw;
@@ -244,6 +245,7 @@ button {
 
     .barra-progresso {
         width: 100vw;
+        padding: 10px;
     }
 
     .detalhe-pagamento {
