@@ -33,7 +33,7 @@ main{
 .card{
 	display: flex;
 	flex-direction: column;
-	width: 30vw;
+	width: 40vw;
 	min-height: 70vh;
 	margin: 5vh 0vw 5vh;
 	padding: 80px;
