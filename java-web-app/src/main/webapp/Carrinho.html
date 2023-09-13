@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ObraGO</title>
+    <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
+    <link rel="stylesheet"  href="Carrinho.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+
+      <img src="Imagens/home.svg" alt="home" id="home">
+        <img src="Imagens/logo.png" alt="logo" id="logo">
+        <img src="Imagens/do-utilizador (1).png" alt="user" id="user">
+    
+      </header>
+      <div class="progress-bar">
+        <div class="step">
+            <div class="step-text">Carrinho</div>
+            <div class="line"></div>
+        </div>
+        <div class="step">
+            <div class="step-text">Finalizar Compra</div>
+            <div class="line"></div>
+        </div>
+        <div class="step">
+            <div class="step-text">Confirmação de Pagamento</div>
+        </div>
+    </div>
+    <main>
+      <div class="titulo">
+        <img src="Imagens/icons8-carrinho-80.png" alt="carrinho">
+        <h1>Carrinho de Compras</h1>
+      </div>
+      <div class="content">
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th><strong>Produto</strong> </th>
+                <th><strong>Quantidade</strong></th>
+                <th><strong>Valor</strong></th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product">
+                    <div class="sombra">
+                    <img src="Imagens/sacotijolo.jpg" alt="img" />
+                    </div>
+                    <div class="info">
+                      <div class="name"> <strong> Tijolo em Saco com 10 Peças</strong></div>
+
+                    </div>
+                  </div>
+                </td>
+                
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                  <td><strong>R$ 10,00</strong></td>
+                </td>
+        
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="product">
+                    <div class="sombra">
+                    <img src="Imagens/argamassa.jpg" alt="img" />
+                    </div>
+                    <div class="info">
+                      <div class="name"><strong>Argamassa  Polimérica Biomassa 0,3 Kg</strong></div>
+
+                    </div>
+                  </div>
+                </td>
+                
+                <td>
+                  <div class="qty">
+                    <button><i class="bx bx-minus"></i></button>
+                    <span>1</span>
+                    <button><i class="bx bx-plus"></i></button>
+                  </div>
+                  <td><strong>R$ 20,00</strong></td>
+                </td>
+
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+
+              
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+      <br>
+      <br>
+      <div class="calcular-frete">
+            <form>
+            <label for:="cep"><strong>FRETE:</strong> </label>
+                <input type="text" name="cep" placeholder="00000" size="5" maxlength="5"> - <input type="text" name="cep2" placeholder="000" size="3" maxlength="3">
+                <button type="submit" class="btn-frete" >Calcular Frete</button>
+         </form>
+      </div>
+<br>
+        <div class="baixo">
+        <div class="frete">
+          <div class="cor-baixo">
+            <p ><strong>Subtotal do Frete: </strong> </p>
+          </div>
+            <div class="valor-frete">
+               <p> <strong>R$ 10,00</strong></p> 
+            </div>
+          </div> 
+        <br>
+        
+        <div class="valor-total">
+          <div class="cor-baixo">
+            <p><strong>Valor Total: </strong></p>
+            </div>
+            <div class="total">
+                <p><strong> R$ 40,00</strong></p> 
+            </div>
+        </div> 
+        </div>
+        <br>
+        <div class="ultimalinha">
+          <div class="continue">
+        <p><i><u>Continuar Comprando</u></i></p>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn-comprar"> Comprar</button>
+        
+          </div>
+          
+        </div>
+        
+        
+        <br>
+        <br>
+    </main>
+  </body>
+</html>
