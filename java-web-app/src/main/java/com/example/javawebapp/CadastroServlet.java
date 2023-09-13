@@ -8,12 +8,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// 1. criar uma classe em java
-// 2. extends HttpServlet
-// 3. "roteamento" anotar a classe com @WebServlet definir
-// name e value
-// 4. sobreescrever os métodos do???  doGet, doPost, doDelete, etc
-// e definir o comportamento
 
 @WebServlet(name = "cadastro", value = "/cadastro")
 public class CadastroServlet extends HttpServlet {
@@ -25,8 +19,7 @@ public class CadastroServlet extends HttpServlet {
         String senha = req.getParameter("senha");
         String ConfirmarSenha = req.getParameter("confirmarsenha");
         String dataNascimento = req.getParameter("datanascimento");
-        // salvar no banco de dados
-        // enviar um email para o admin com a mensagem
+       
         System.out.println(nome);
         System.out.println(email);
         System.out.println(senha);
