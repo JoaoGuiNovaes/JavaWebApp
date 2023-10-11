@@ -19,6 +19,10 @@ public class CadastroServlet extends HttpServlet {
         String senha = req.getParameter("senha");
         String ConfirmarSenha = req.getParameter("confirmarsenha");
         String dataNascimento = req.getParameter("datanascimento");
+
+        if(nome != " "){
+
+        }
        
         System.out.println(nome);
         System.out.println(email);
