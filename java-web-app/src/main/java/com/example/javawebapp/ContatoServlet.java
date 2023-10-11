@@ -1,6 +1,9 @@
 package com.example.javawebapp;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
+import com.example.javawebapp.validators.EmailValidator;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -18,9 +21,23 @@ public class ContatoServlet extends HttpServlet {
         String email = req.getParameter("email");
         String mensagem = req.getParameter("mensagem");
       
-        System.out.println(nome);
-        System.out.println(email);
-        System.out.println(mensagem);
+        ArrayList<String> erros = new ArrayList<>();
+
+        if (nome == null || nome.isBlank()) {
+            erros.add("O nome não pode ser vazio");
+        }
+
+        if (email == null || email.isBlank()) {
+            erros.add("o email não pode ser vazio");
+        }
+
+        if (email != null && !EmailValidator.isValid(email)) {
+            erros.add("E-mail inválido");
+        }
+
+        if (mensagem == null || mensagem.isBlank()) {
+            erros.add("A mensagem não pode ser vazio");
+        }
     }
 
     

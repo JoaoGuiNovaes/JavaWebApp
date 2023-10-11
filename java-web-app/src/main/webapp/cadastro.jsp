@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,35 +26,43 @@
         <div class="direita" >
             <div class="card container mt-5">
                 <h1>Cadastro de Usuário</h1>
+                <c:if test="${erros != null}">
+                    <h2>Erros no formulário</h2>
+                        <ul>
+                            <c:forEach var="erro" items="${erros}">
+                                <li>${erro}</li>
+                            </c:forEach>
+                        </ul>
+                </c:if>
                 <form action="cadastro" method="post" id="form1">
                     <label for="nome" class="form-label">Nome completo</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
-                        <input type="text" id="nome" name="nome" class="form-control" required
-                            placeholder="Digite seu nome">
+                        <input type="text" id="nome" name="nome" class="form-control" 
+                            placeholder="Digite seu nome" value="${nome}">
                     </div>
                     <label for="email" class="form-label">E-mail</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/email.svg" alt="">
-                        <input type="email" id="email" name="email" class="form-control" required
-                            placeholder="Digite seu E-mail">
+                        <input type="email" id="email" name="email" class="form-control" 
+                            placeholder="Digite seu E-mail" value="${email}">
                     </div>
                     <label for="senha" class="form-label">Senha</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
-                        <input type="password" id="senha" name="senha" class="form-control" required
-                            placeholder="Digite sua senha">
+                        <input type="password" id="senha" name="senha" class="form-control" 
+                            placeholder="Digite sua senha" value="${senha}">
                     </div>
                     <label for="confirmar_senha" class="form-label">Confirmar senha</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
-                        <input type="password" id="confirmar_senha" name="confirmarsenha" class="form-control" required
-                            placeholder="Confirme sua senha">
+                        <input type="password" id="confirmar_senha" name="confirmarsenha" class="form-control" 
+                            placeholder="Confirme sua senha" value="${confirmarsenha}">
                     </div>
                     <label for="data_nascimento" class="form-label">Data de nascimento</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/calendar.svg" alt="">
-                        <input type="date" id="data_nascimento" name="datanascimento" class="form-control" required>
+                        <input type="date" id="data_nascimento" name="datanascimento" class="form-control" value="${datanascimento}">
                     </div>
                     <div class="divbutton">
                         <button type="button" class="btn btn-light">Cancelar</button>
