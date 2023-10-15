@@ -34,7 +34,7 @@
                             </c:forEach>
                         </ul>
                 </c:if>
-                <form action="cadastro" method="post" id="form1">
+                <form action="Cadastro" method="post" id="form1">
                     <label for="nome" class="form-label">Nome completo</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
@@ -47,7 +47,7 @@
                         <input type="email" id="email" name="email" class="form-control" 
                             placeholder="Digite seu E-mail" value="${email}">
                     </div>
-                    <label for="senha" class="form-label">Senha</label>
+                    <label for="senha" class="form-label">Senhaaaa</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="senha" name="senha" class="form-control" 

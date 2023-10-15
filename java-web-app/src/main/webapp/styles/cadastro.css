@@ -122,6 +122,9 @@ button {
     font-weight: bold;
 }
 
+li {
+	color: red;
+}
 
 @media screen and (max-width: 1186px) {
     main {

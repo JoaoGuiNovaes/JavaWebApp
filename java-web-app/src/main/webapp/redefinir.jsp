@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
         <div class="direita">
             <div class="card container mt-5">
                 <h1>Redefinir Senha</h1>
-                <form action="redefinir" method="post">
+                <form action="Redefinir" method="post">
                     <label for="senha" class="form-label">Nova senha</label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">

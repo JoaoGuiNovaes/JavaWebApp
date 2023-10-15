@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "redefinir", value = "/redefinir")
+@WebServlet(name = "Redefinir", value = "/Redefinir")
 public class RedefinirServlet extends HttpServlet {
 
     @Override

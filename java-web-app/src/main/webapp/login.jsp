@@ -33,7 +33,7 @@
 						</ul>
 				</c:if>
 
-				<form action="login" method="post">
+				<form action="Login" method="post">
 					<div class="campotexto">
 						<label for="email">Email</label>
 						<div class="input-group baseflex">

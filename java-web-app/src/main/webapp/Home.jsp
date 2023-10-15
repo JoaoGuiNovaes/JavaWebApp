@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,7 +20,7 @@
         </div>
         <div class="header-icons">
             <img class="specific-icon" src="Imagens/icons8-pesquisar-50home.png" alt="pesquisar" id="pesquisar">
-            <a href="Carrinho.html"><img src="Imagens/icons8-carrinho-48home.png" alt="carrinho" id="carrinho"></a>
+            <a href="Carrinho.jsp"><img src="Imagens/icons8-carrinho-48home.png" alt="carrinho" id="carrinho"></a>
             <img src="Imagens/icons8-user-64home.png" alt="usuario" id="">
             <img class="header-menu-icon" src="Imagens/icons8-cardápio-50home.png" alt="menu" id="menu">
         </div>
@@ -33,7 +35,7 @@
                     <div class="grid-description">Cimento CP-II-32 50kg Nacional</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
     
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -41,7 +43,7 @@
                     </div>
                     <div class="grid-description">Voto Massa Pronta 20kg</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -49,7 +51,7 @@
                     </div>
                     <div class="grid-description">Tela Confibra Ondulada de Fibrocimento</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -57,7 +59,7 @@
                     </div>
                     <div class="grid-description">Rejunte Flexível Branco 1Kg Fortaleza</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -65,7 +67,7 @@
                     </div>
                     <div class="grid-description">Descrição do produto 2</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -73,7 +75,7 @@
                     </div>
                     <div class="grid-description">Coluna Armada 3/8" - 0,09 x 0,15 cm 4 ferros</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -81,7 +83,7 @@
                     </div>
                     <div class="grid-description">Tijolo em Sco com 10 peças</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
                 <div class="grid-item">
                     <div class="image-container">
@@ -89,7 +91,7 @@
                     </div>
                     <div class="grid-description"> Argamassa Polimérica Biomassa 0,3 Kg</div>
                     <div class="grid-value"><strong>R$29,00</strong></div>
-                    <button class="grid-button"><a href="Carrinho.html">Comprar</a></button>
+                    <button class="grid-button"><a href="Carrinho.jsp">Comprar</a></button>
                 </div>
             </div>
         </div>

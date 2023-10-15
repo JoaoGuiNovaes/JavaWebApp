@@ -3,6 +3,7 @@ package com.example.javawebapp;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.regex.*;
 
 import com.example.javawebapp.validators.DateValidator;
 import com.example.javawebapp.validators.EmailValidator;
@@ -14,7 +15,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "cadastro", value = "/cadastro")
+@WebServlet(name = "Cadastro", value = "/Cadastro")
 public class CadastroServlet extends HttpServlet {
 
     @Override
@@ -48,9 +49,13 @@ public class CadastroServlet extends HttpServlet {
         }
 
         if (senha != null) {
-            boolean letraMinuscula = false;
-            boolean letraMaiuscula = false;
-            boolean digito = false;
+            String regexMaiuscula = ".*[A-Z].*";
+            String regexMinuscula = ".*[a-z].*";
+            String regexNumero = ".*\\d.*";
+
+            boolean letraMinuscula = senha.matches(regexMaiuscula);
+            boolean letraMaiuscula = senha.matches(regexMinuscula);
+            boolean digito = senha.matches(regexNumero);
 
             if (!letraMinuscula) {
                 erros.add("A Senha deve ter uma letra minúscula");
@@ -65,7 +70,7 @@ public class CadastroServlet extends HttpServlet {
             }
         }
 
-        if (confirmarSenha != senha) {
+        if (!senha.equals(confirmarSenha)) {
             erros.add("As senhas devem ser iguais");
         }
 
@@ -89,7 +94,7 @@ public class CadastroServlet extends HttpServlet {
             req.setAttribute("dataNascimento", dataNascimento);
             req.setAttribute("erros", erros);
 
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/cadastro.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/Cadastro.jsp");
             dispatcher.forward(req, res);
         }
 

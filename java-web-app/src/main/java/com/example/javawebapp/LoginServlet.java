@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import com.example.javawebapp.validators.EmailValidator;
 
-@WebServlet(name = "login", value = "/login")
+@WebServlet(name = "Login", value = "/Login")
 public class LoginServlet extends HttpServlet {
 
     @Override
@@ -76,7 +76,7 @@ public class LoginServlet extends HttpServlet {
             req.setAttribute("email", email);
             req.setAttribute("erros", erros);
 
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/login.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/Login.jsp");
             dispatcher.forward(req, res);
         }
     }
