@@ -62,7 +62,9 @@ main {
     /* overflow: auto; */
 }
 
-
+li{
+    color: red;
+}
 
 h1 {
     margin-top: 5%;
