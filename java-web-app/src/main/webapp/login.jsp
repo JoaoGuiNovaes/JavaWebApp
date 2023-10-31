@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 		<!DOCTYPE html>
 		<html lang="en">
@@ -8,7 +9,9 @@
 			<meta charset="UTF-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Login</title>
+			<title>
+				<fmt:message key="login.title" />
+			</title>
 			<link rel="stylesheet" href="styles/login.css">
 		</head>
 
@@ -20,43 +23,45 @@
 			<main>
 				<div class="card">
 					<div class="baseflex">
-						<h1>Login</h1>
+						<h1>
+							<fmt:message key="login.title" />
+						</h1>
 						<img src="Imagens/login.png" class="icon2" alt="Icon de Login" />
 					</div>
 
 					<c:if test="${violations != null}">
 						<h3>
 							<fmt:message key="login.message" />
-							</h2>
-							<ul>
-								<c:forEach var="violation" items="${violations}">
-									<li>${violation.propertyPath} ${violation.message}</li>
-								</c:forEach>
-							</ul>
+						</h3>
+						<ul>
+							<c:forEach var="violation" items="${violations}">
+								<li>${violation.propertyPath} ${violation.message}</li>
+							</c:forEach>
+						</ul>
 					</c:if>
 
 					<form action="Login" method="post">
 						<div class="campotexto">
-							<label for="email">Email</label>
+							<label for="email"><fmt:message key="login.email" /></label>
 							<div class="input-group baseflex">
 								<img class="icon" src="Imagens/email.svg" alt="">
 								<input type="email" name="email" placeholder="Digite seu email" value="${email}" />
 							</div>
 						</div>
 						<div class="campotexto">
-							<label for="senha">Senha</label>
+							<label for="senha"><fmt:message key="login.password" /></label>
 							<div class="input-group baseflex">
 								<img class="icon" src="Imagens/lock.svg" alt="">
 								<input type="password" name="senha" placeholder="Digite sua senha" value="${senha}">
 							</div>
 						</div>
 
-						<button class="btn">Esqueceu a senha?</button>
+						<button class="btn"><fmt:message key="login.buttonForgotPassword" /></button>
 
-						<button class="btn2">Entrar</button>
+						<button class="btn2"><fmt:message key="login.button" /></button>
 
-						<p>Ainda não tem uma conta?</p>
-						<button class="btn2"><a href="Cadastro.jsp">Criar conta</a></button>
+						<p><fmt:message key="login.notAccount" /></p>
+						<button class="btn2"><a href="Cadastro.jsp"><fmt:message key="login.buttonCreateAccount" /></a></button>
 					</form>
 				</div>
 			</main>

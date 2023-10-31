@@ -16,6 +16,11 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ContatoServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        res.sendRedirect("contato.jsp");
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String nome = req.getParameter("nome");
         String email = req.getParameter("email");

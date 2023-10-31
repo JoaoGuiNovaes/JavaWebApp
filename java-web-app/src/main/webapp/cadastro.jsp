@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -15,7 +16,9 @@
                 crossorigin="anonymous">
             <link rel="stylesheet" href="styles/cadastro.css">
 
-            <title>cadastro</title>
+            <title>
+                <fmt:message key="cadastro.title" />
+            </title>
         </head>
 
         <body>
@@ -26,51 +29,55 @@
                 </div>
                 <div class="direita">
                     <div class="card container mt-5">
-                        <h1>Cadastro de Usuário</h1>
+                        <h1>
+                            <fmt:message key="cadastro.title" />
+                        </h1>
+
                         <c:if test="${violations != null}">
                             <h3>
-                                <fmt:message key="registration.message" />
-                                </h2>
-                                <ul>
-                                    <c:forEach var="violation" items="${violations}">
-                                        <li>${violation.propertyPath} ${violation.message}</li>
-                                    </c:forEach>
-                                </ul>
+                                <fmt:message key="cadastro.title" />
+                            </h3>
+                            <ul>
+                                <c:forEach var="violation" items="${violations}">
+                                    <li>${violation.propertyPath} ${violation.message}</li>
+                                </c:forEach>
+                            </ul>
                         </c:if>
-                        <form action="Cadastro" method="post" id="form1">
-                            <label for="nome" class="form-label">Nome completo</label>
+
+                        <form action="cadastro" method="post" id="form1">
+                            <label for="nome" class="form-label"><fmt:message key="cadastro.name" /></label>
                             <div class="input-group">
                                 <img class="icon" src="Imagens/nome.svg" alt="">
                                 <input type="text" id="nome" name="nome" class="form-control"
-                                    placeholder="Digite seu nome" value="${nome}">
+                                    placeholder="Digite seu nome" value="${cadastroForm.nome}">
                             </div>
-                            <label for="email" class="form-label">E-mail</label>
+                            <label for="email" class="form-label"><fmt:message key="cadastro.email" /></label>
                             <div class="input-group">
                                 <img class="icon" src="Imagens/email.svg" alt="">
                                 <input type="email" id="email" name="email" class="form-control"
-                                    placeholder="Digite seu E-mail" value="${email}">
+                                    placeholder="Digite seu E-mail" value="${cadastroForm.email}">
                             </div>
-                            <label for="senha" class="form-label">Senha</label>
+                            <label for="senha" class="form-label"><fmt:message key="cadastro.password" /></label>
                             <div class="input-group">
                                 <img class="icon" src="Imagens/lock.svg" alt="">
                                 <input type="password" id="senha" name="senha" class="form-control"
-                                    placeholder="Digite sua senha" value="${senha}">
+                                    placeholder="Digite sua senha" value="${cadastroForm.senha}">
                             </div>
-                            <label for="confirmar_senha" class="form-label">Confirmar senha</label>
+                            <label for="confirmar_senha" class="form-label"><fmt:message key="cadastro.c_password" /></label>
                             <div class="input-group">
                                 <img class="icon" src="Imagens/lock.svg" alt="">
                                 <input type="password" id="confirmar_senha" name="confirmarsenha" class="form-control"
-                                    placeholder="Confirme sua senha" value="${confirmarsenha}">
+                                    placeholder="Confirme sua senha" value="${cadastroForm.confirmarSenha}">
                             </div>
-                            <label for="data_nascimento" class="form-label">Data de nascimento</label>
+                            <label for="data_nascimento" class="form-label"><fmt:message key="cadastro.dateBirth" /></label>
                             <div class="input-group">
                                 <img class="icon" src="Imagens/calendar.svg" alt="">
                                 <input type="date" id="data_nascimento" name="datanascimento" class="form-control"
-                                    value="${datanascimento}">
+                                value="${cadastroForm.dataNascimento}">
                             </div>
                             <div class="divbutton">
-                                <button type="button" class="btn btn-light">Cancelar</button>
-                                <button type="submit" class="btn btn-dark">Cadastrar</button>
+                                <button type="button" class="btn btn-light"><fmt:message key="cadastro.buttonCancel" /></button>
+                                <button type="submit" class="btn btn-dark"><fmt:message key="cadastro.buttonRegister" /></button>
                             </div>
                         </form>
                     </div>

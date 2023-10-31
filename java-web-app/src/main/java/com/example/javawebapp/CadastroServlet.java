@@ -19,11 +19,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolation;
 
-@WebServlet(name = "Cadastro", value = "/Cadastro")
+@WebServlet(name = "Cadastro", value = "/cadastro")
 public class CadastroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        res.sendRedirect("Cadastro.jsp");
+        res.sendRedirect("cadastro.jsp");
     }
 
     @Override
