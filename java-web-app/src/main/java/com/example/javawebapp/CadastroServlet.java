@@ -1,17 +1,10 @@
 package com.example.javawebapp;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Set;
-import java.util.regex.*;
-
 import com.example.javawebapp.forms.CadastroForm;
-import com.example.javawebapp.validators.DateValidator;
-import com.example.javawebapp.validators.EmailValidator;
+import com.example.javawebapp.usuario.UsuarioDao;
 import com.example.javawebapp.validators.ValidatorUtil;
-
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -23,7 +16,11 @@ import jakarta.validation.ConstraintViolation;
 public class CadastroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+<<<<<<< Updated upstream
         res.sendRedirect("cadastro.jsp");
+=======
+        req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
+>>>>>>> Stashed changes
     }
 
     @Override
@@ -38,12 +35,19 @@ public class CadastroServlet extends HttpServlet {
         
         Set<ConstraintViolation<CadastroForm>> violations = ValidatorUtil.validateObject(cadastroForm);
         
-        if (violations.isEmpty()) {
-            res.sendRedirect("Home.jsp");
+      if (violations.isEmpty()) {
+            if (UsuarioDao.existeComEmail(email)) {
+                // mandar erro na tela
+                req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
+                req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
+            } else {
+                UsuarioDao.cadastrar(nome, email, senha, dataNascimento);
+                res.sendRedirect("Home.jsp");
+            }
         } else {
             req.setAttribute("cadastroForm", cadastroForm);
             req.setAttribute("violations", violations);
-            req.getRequestDispatcher("Cadastro.jsp").forward(req, res);
+            req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
         }
 
     }
