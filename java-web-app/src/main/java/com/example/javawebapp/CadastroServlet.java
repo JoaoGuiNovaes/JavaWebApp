@@ -16,11 +16,7 @@ import jakarta.validation.ConstraintViolation;
 public class CadastroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-<<<<<<< Updated upstream
         res.sendRedirect("cadastro.jsp");
-=======
-        req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
->>>>>>> Stashed changes
     }
 
     @Override

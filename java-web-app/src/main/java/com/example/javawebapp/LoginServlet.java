@@ -20,11 +20,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-<<<<<<< Updated upstream
-        res.sendRedirect("login.jsp");
-=======
         req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
->>>>>>> Stashed changes
     }
 
     // TODO: isolar validações em outro método/classe/...
