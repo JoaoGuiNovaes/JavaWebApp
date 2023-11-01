@@ -1,75 +1,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-		<!DOCTYPE html>
-		<html lang="en">
+            <!DOCTYPE html>
+            <html lang="en">
 
-		<head>
-			<meta charset="UTF-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>
-				<fmt:message key="login.title" />
-			</title>
-			<link rel="stylesheet" href="styles/login.css">
-		</head>
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&display=swap"
+                    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+                    crossorigin="anonymous">
+                <link rel="stylesheet" href="styles/cadastro.css">
 
-		<body>
-			<header>
-				<img src="Imagens/ObraGo2.jpeg" class="logo" alt="Logo" />
-			</header>
+                <title>
+                    <fmt:message key="login.title" />
+                </title>
+            </head>
 
-			<main>
-				<div class="card">
-					<div class="baseflex">
-						<h1>
-							<fmt:message key="login.title" />
-						</h1>
-						<img src="Imagens/login.png" class="icon2" alt="Icon de Login" />
-					</div>
+            <body>
+                <main>
+                    <div class="esquerda">
 
-					<c:if test="${violations != null}">
-						<h3>
-							<fmt:message key="login.message" />
-						</h3>
-						<ul>
-							<c:forEach var="violation" items="${violations}">
-								<li>${violation.propertyPath} ${violation.message}</li>
-							</c:forEach>
-						</ul>
-					</c:if>
+                        <img class="logo" src="Imagens/ObraGo1.png" alt="Logo">
+                    </div>
+                    <div class="direita">
+                        <div class="card container mt-5">
+                            <h1>
+                                Login
+                            </h1>
+                            <c:if test="${violations != null}">
+                                <h3>
+                                    <fmt:message key="login.message" />
+                                    </h2>
+                                    <ul>
+                                        <c:forEach var="violation" items="${violations}">
+                                            <li>${violation.propertyPath} ${violation.message}</li>
+                                        </c:forEach>
+                                    </ul>
+                            </c:if>
+                            <form action="Login" method="post">
+                                <label for="email" class="form-label">E-mail</label>
+                                <div class="input-group">
+                                    <img class="icon" src="Imagens/email.svg" alt="">
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="Digite seu E-mail" value="${email}">
+                                </div>
+                                <label for="senha" class="form-label">Senha</label>
+                                <div class="input-group">
+                                    <img class="icon" src="Imagens/lock.svg" alt="">
+                                    <input type="password" id="senha" name="senha" class="form-control"
+                                        placeholder="Digite sua senha" value="${senha}">
+                                </div>
+                                <div class="divbutton">
+									<button type="button" class="btn btn-light">Cancelar</button>
+                                    <button type="submit" class="btn btn-dark">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </body>
 
-					<form action="Login" method="post">
-						<div class="campotexto">
-							<label for="email"><fmt:message key="login.email" /></label>
-							<div class="input-group baseflex">
-								<img class="icon" src="Imagens/email.svg" alt="">
-								<input type="email" name="email" placeholder="Digite seu email" value="${email}" />
-							</div>
-						</div>
-						<div class="campotexto">
-							<label for="senha"><fmt:message key="login.password" /></label>
-							<div class="input-group baseflex">
-								<img class="icon" src="Imagens/lock.svg" alt="">
-								<input type="password" name="senha" placeholder="Digite sua senha" value="${senha}">
-							</div>
-						</div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+                crossorigin="anonymous"></script>
+            <script src="scripts.js"></script>
+            </body>
 
-						<button class="btn"><fmt:message key="login.buttonForgotPassword" /></button>
-
-						<button class="btn2"><fmt:message key="login.button" /></button>
-
-						<p><fmt:message key="login.notAccount" /></p>
-						<button class="btn2"><a href="Cadastro.jsp"><fmt:message key="login.buttonCreateAccount" /></a></button>
-					</form>
-				</div>
-			</main>
-
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-				crossorigin="anonymous"></script>
-			<script src="scripts.js"></script>
-		</body>
-
-		</html>
+            </html>

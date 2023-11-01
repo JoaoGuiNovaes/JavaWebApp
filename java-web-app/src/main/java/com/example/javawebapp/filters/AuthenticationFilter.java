@@ -24,7 +24,7 @@ public class AuthenticationFilter implements Filter {
         String emailUsuario = (String) session.getAttribute("emailUsuario");
 
         if (emailUsuario == null) {
-            res.sendRedirect("login");
+            res.sendRedirect("Login");
             return;
         }
 

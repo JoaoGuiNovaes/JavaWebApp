@@ -12,12 +12,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "contato", value = "/contato")
+@WebServlet(name = "Contato", value = "/Contato")
 public class ContatoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        res.sendRedirect("contato.jsp");
+        res.sendRedirect("Contato.jsp");
     }
 
     @Override

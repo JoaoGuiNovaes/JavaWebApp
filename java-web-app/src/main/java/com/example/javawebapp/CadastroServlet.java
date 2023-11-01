@@ -2,9 +2,11 @@ package com.example.javawebapp;
 
 import java.io.IOException;
 import java.util.Set;
+
 import com.example.javawebapp.forms.CadastroForm;
 import com.example.javawebapp.usuario.UsuarioDao;
 import com.example.javawebapp.validators.ValidatorUtil;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,11 +14,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolation;
 
-@WebServlet(name = "Cadastro", value = "/cadastro")
+@WebServlet(name = "cadastroServlet", value = "/Cadastro")
 public class CadastroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        res.sendRedirect("cadastro.jsp");
+        req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
     }
 
     @Override
