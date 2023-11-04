@@ -33,14 +33,14 @@ public class CadastroServlet extends HttpServlet {
         
         Set<ConstraintViolation<CadastroForm>> violations = ValidatorUtil.validateObject(cadastroForm);
         
-      if (violations.isEmpty()) {
+        if (violations.isEmpty()) {
             if (UsuarioDao.existeComEmail(email)) {
                 // mandar erro na tela
                 req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
                 req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
             } else {
                 UsuarioDao.cadastrar(nome, email, senha, dataNascimento);
-                res.sendRedirect("Home.jsp");
+                res.sendRedirect("Login");
             }
         } else {
             req.setAttribute("cadastroForm", cadastroForm);

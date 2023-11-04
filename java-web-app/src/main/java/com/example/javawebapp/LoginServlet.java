@@ -39,20 +39,20 @@ public class LoginServlet extends HttpServlet {
         Set<ConstraintViolation<LoginForm>> violations = 
             ValidatorUtil.validateObject(loginForm);
 
-        if (violations.isEmpty()) {
-            if (UsuarioDao.login(email, senha)) {
-                HttpSession session = req.getSession();
-                session.setAttribute("emailUsuario", email);
-                res.sendRedirect("Home.jsp");
+            if (violations.isEmpty()) {
+                if (UsuarioDao.login(email, senha)) {
+                    HttpSession session = req.getSession();
+                    session.setAttribute("emailUsuario", email);
+                    res.sendRedirect("Login");
+                } else {
+                    req.setAttribute("errorLogin", "E-mail ou senha incorretos");
+                    req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
+                }
             } else {
-                req.setAttribute("errorLogin", "E-mail ou senha incorretos");
+                req.setAttribute("email", email);
+                req.setAttribute("senha", senha);
+                req.setAttribute("violations", violations);
                 req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
             }
-        } else {
-            req.setAttribute("email", email);
-            req.setAttribute("senha", senha);
-            req.setAttribute("violations", violations);
-            req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
-        }
-    }
+}
 }
