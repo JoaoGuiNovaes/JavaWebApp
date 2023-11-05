@@ -14,7 +14,7 @@
                 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&display=swap"
                     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
                     crossorigin="anonymous">
-                <link rel="stylesheet" href="styles/cadastro.css">
+                <link rel="stylesheet" href="styles/login.css">
 
                 <title>
                     <fmt:message key="login.title" />
@@ -29,9 +29,10 @@
                     </div>
                     <div class="direita">
                         <div class="card container mt-5">
-                            <h1>
-                                Login
-                            </h1>
+                            <div class="container titulo">
+                                <h1>Login</h1>
+                                <img class="iconlogin" src="Imagens/login.png" alt="Imagem de login">
+                              </div>
                             <c:if test="${violations != null}">
                                 <h3>
                                     <fmt:message key="login.message" />
@@ -58,6 +59,10 @@
                                 <div class="divbutton">
 									<button type="button" class="btn btn-light">Cancelar</button>
                                     <button type="submit" class="btn btn-dark">Entrar</button>
+                                </div>
+                                <div class="aindanao">
+                                    <strong class="ainda">Ainda não tem uma conta?</strong>
+                                    <button type="button" class="btn btn-dark criar">Criar conta</button>
                                 </div>
                             </form>
                         </div>
