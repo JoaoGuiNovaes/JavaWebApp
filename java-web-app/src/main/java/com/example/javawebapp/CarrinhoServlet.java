@@ -8,11 +8,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
-@WebServlet(name = "finalizarCompraServlet", value = "/FinalizarCompra")
-public class FinalizarCompraServlet extends HttpServlet {
+    
+@WebServlet(name = "carrinhoServlet", value = "/Carrinho")
+public class CarrinhoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/FinalizarCompra.jsp").forward(req, res);
+        req.getRequestDispatcher("WEB-INF/Carrinho.jsp").forward(req, res);
     }
 }
+
