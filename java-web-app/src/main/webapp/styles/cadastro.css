@@ -10,10 +10,7 @@ main {
     width: 100%;
 }
 
-.logo {
-    height: 10px;
-    width: 10px;
-}
+
 
 .esquerda {
     display: flex;
@@ -23,18 +20,18 @@ main {
     min-height: 100vh;
     width: 34vw;
     flex-direction: column;
-    background-color: #7a6a53;
+    background-color: #004aad;
 }
 
 .logo {
-    margin-right: 10%;
-    width: 130%;
-    height: 125%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 
 .card:hover {
-    box-shadow: 0px 0px 50px 0px rgba(18, 33, 51, 0.247);
+    box-shadow: 0px 0px 30px 0px rgba(18, 33, 51, 0.247);
 }
 
 .direita {
@@ -44,10 +41,11 @@ main {
     height: 100%;
     min-height: 100vh;
     width: 66vw;
-    background-color: #c0c0c0
+    background-color: #dedfe0;
 }
 
 .card {
+   
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -55,7 +53,7 @@ main {
     width: 45%;
     border-radius: 50px;
     transition: .5s ease-in;
-    background-color: #d6d6d6;
+    background-color: #f1f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 500px;
             
@@ -91,6 +89,7 @@ label {
 }
 
 form {
+    
     flex: 1;
     height: 80%;
     margin-top: 7%;
@@ -100,6 +99,7 @@ form {
 .input-group {
     position: relative;
     right: 32px;
+   
 }
 
 .form-control {
@@ -115,7 +115,7 @@ form {
 
 button {
     margin-top: 10%;
-    margin-left: 10px;
+    margin-left: 100px;
     width: 50%
 }
 
@@ -186,6 +186,15 @@ li {
         margin-top: 7%;
     }
 
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .logo{
+        width: 70%;
+
+    }
 
 }
 @media screen and (max-width: 676px) {

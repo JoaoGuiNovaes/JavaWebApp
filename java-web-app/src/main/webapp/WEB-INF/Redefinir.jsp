@@ -20,7 +20,7 @@
     <main>
         <div class="esquerda">
 
-            <img class="logo" src="Imagens/ObraGo.png" alt="Logo">
+            <img class="logo" src="Imagens/logonova.png" alt="Logo">
         </div>
         <div class="direita">
             <div class="card container mt-5">
@@ -40,8 +40,8 @@
                     </div>
                     
                     <div class="divbutton">
-                        <button type="button" class="btn btn-light">Cancelar</button>
-                        <button type="submit" class="btn btn-dark">Cadastrar</button>
+                    
+                        <button type="submit" class="btn btn-dark">Redefinir</button>
                     </div>
                 </form>
             </div>

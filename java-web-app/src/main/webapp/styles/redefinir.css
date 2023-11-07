@@ -1,43 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&family=Roboto&display=swap');
+
+body{
+    margin: 0;
+}
+
 main {
     display: flex;
-    position: absolute;
-
-    height: 100vh;
-    width: 100vw;
-
-    justify-content: center;
-    align-items: center;
-
+    height: 100%;
+    width: 100%;
 }
 
-.logo {
-    height: 400px;
-    width: 400px;
-}
+
 
 .esquerda {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 34%;
+    min-height: 100vh;
+    width: 34vw;
     flex-direction: column;
-    background-color: #7a6a53;
+    background-color: #004aad;
 }
 
 .logo {
-    margin-right: 10%;
-    width: 130%;
-    height: 125%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
-li {
-	color: red;
-}
 
 .card:hover {
-    box-shadow: 0px 0px 50px 0px rgba(18, 33, 51, 0.247);
+    box-shadow: 0px 0px 30px 0px rgba(18, 33, 51, 0.247);
 }
 
 .direita {
@@ -45,29 +39,34 @@ li {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 66%;
-    background-color: #c0c0c0
+    min-height: 100vh;
+    width: 66vw;
+    background-color: #dedfe0;
 }
 
 .card {
+   
     display: flex;
     flex-direction: column;
-    height: 73%;
-    padding: 10px;
+    padding: 50px;
     align-items: center;
-    width: 30vw;
-    box-sizing: border-box;
+    width: 45%;
     border-radius: 50px;
     transition: .5s ease-in;
-    background-color: #d6d6d6;
-    overflow: auto;
+    background-color: #f1f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+            
+    /* overflow: auto; */
 }
 
-
+li{
+    color: red;
+}
 
 h1 {
     margin-top: 5%;
-    font-size: 44px;
+    font-size: 42px;
     font-weight: bold;
 }
 
@@ -83,27 +82,27 @@ label {
     font-weight: bold;
 }
 
-.icon{
+.icon {
     position: relative;
     right: 6px;
     width: 6%;
 }
 
 form {
+    
     flex: 1;
     height: 80%;
     margin-top: 7%;
     width: 80%;
-    border: 0, 4px solid black;
 }
 
-.input-group{
+.input-group {
     position: relative;
-    right: 32px; 
+    right: 32px;
+   
 }
 
 .form-control {
-    width: 100%;
     border: 0.2px solid #bdbdbd;
     border-radius: 5px;
     background-color: transparent;
@@ -116,7 +115,7 @@ form {
 
 button {
     margin-top: 10%;
-    margin-left: 10px;
+    margin-left: 100px;
     width: 50%
 }
 
@@ -125,8 +124,11 @@ button {
     font-weight: bold;
 }
 
+li {
+	color: red;
+}
 
-@media screen and (max-width: 943px) {
+@media screen and (max-width: 1186px) {
     main {
         width: 100vw;
         height: 100vh;
@@ -149,7 +151,6 @@ button {
     }
 
     form {
-
         margin-top: 1%;
         width: 80%;
         height: 60%;
@@ -158,10 +159,12 @@ button {
 
     .card {
         padding: 15px;
-        flex-wrap: wrap;
-        width: 70vw;
-        height: 60vh;
+        /* flex-wrap: wrap; */
+        /* width: 70vw; */
+        height: 60%;
         align-items: center;
+        
+        /* overflow: auto; */
     }
 
 
@@ -177,11 +180,32 @@ button {
 
     h1 {
         font-size: 30px;
-        font-family: 'Anton', sans-serif;
         text-align: center;
     }
 
     button {
-        margin-top: 7%;
+        margin-top: 15%;
     }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .logo{
+        width: 70%;
+
+    }
+
+}
+@media screen and (max-width: 676px) {
+    .card{
+        width: 70%;
+
+    }
+button{
+    height: 30px;
+    width: 100px;
+    
+}
 }

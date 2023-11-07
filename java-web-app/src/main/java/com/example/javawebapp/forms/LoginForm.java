@@ -9,7 +9,7 @@ import jakarta.validation.constraints.Size;
 public class LoginForm {
     @NotNull
     @NotBlank
-    @Email(message = "válido por favor!!!")
+    @Email
     private String email;
     @NotNull
     @NotEmpty

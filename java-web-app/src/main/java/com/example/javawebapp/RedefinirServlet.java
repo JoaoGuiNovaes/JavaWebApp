@@ -12,6 +12,9 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "Redefinir", value = "/Redefinir")
 public class RedefinirServlet extends HttpServlet {
 
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        req.getRequestDispatcher("WEB-INF/Redefinir.jsp").forward(req, res);
+    }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
