@@ -4,7 +4,7 @@ body{
     
 }
 header{
-    background-color: #a79468d2;
+    background-color: #004aad;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,18 +17,17 @@ img.header{
 }
 
 #home{
-    height: 64px;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 #logo{
-    width: 450px;
-    margin: 0 auto;
+    width: auto;
+  height: 70px;
 }
 
 #user{
-    height: 64px;
-    margin-right: 20px;
+    height: 32px;
+    margin-right: 50px;
 }
 
 #processos{
@@ -37,14 +36,13 @@ img.header{
 }
 
 main{
-    background-color: #8f8263b4;
+    background-color: #dedfe0;
     display: block;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 h1{
-    color: white;
     padding-left: 5px;
     
 }
@@ -61,7 +59,6 @@ table{
 th{
     text-align: center;
     vertical-align: middle;
-    color: #FFFFFF;
 }
 
 td{
@@ -71,7 +68,7 @@ td{
 }
 
 .td-img{
-    background-color: rgba(219, 216, 216, 0.514);
+    background-color: #bdbcbc6e;
     border-radius: 30px;
     width: 130px;
     height: 85px;
@@ -93,7 +90,6 @@ td{
 }
 
 p{
-    color: #FFFFFF;
     font-size: 18px;
 }
 
@@ -110,8 +106,8 @@ select{
     width: 200px;
     margin-left: 20px;
     margin-top: 15px;
-    background-color: #f7e4b254;
-    border-color: #f7e4b254;
+    background-color: white;
+    border-color: white;
 }
 
 .detalhe-pagamento {
@@ -172,7 +168,7 @@ button {
 
 .barra-progresso {
     width: 100%;
-    background-color:rgba(122, 106, 83, 0.87);
+    background-color:#b4b4b498;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -189,7 +185,7 @@ button {
     content: "";
     width: 20px;
     height: 20px;
-    background-color: #ccc;
+    background-color: #56c535;
     border-radius: 50%;
     display: block;
     margin: 0 auto 10px;
@@ -197,16 +193,16 @@ button {
 }
 
 .step:first-child::before {
-    background-color: #ccc; /* Primeira etapa concluída */
+    background-color: #56c535; /* Primeira etapa concluída */
 }
 
 .step:last-child::before {
-    background-color: #ccc; /* Última etapa não concluída */
+    background-color: #a7a7a7; /* Última etapa não concluída */
 }
 
 /* Texto abaixo dos círculos */
 .step-text {
-    color: #ccc;
+    color: black;
 }
 
 /* Linhas entre os pontos */
@@ -228,6 +224,31 @@ button {
     background-color: black;
 }
 
+footer {
+    height: 70px;
+    background-color: #004aad;
+    display: flex;
+    padding: 10px 20px ;
+}
+
+.div-footer {
+    display: flex;
+    align-self: flex-start;
+    flex-grow: 1;
+}
+
+.footer-image {
+    align-self: flex-start;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.footer-description {
+    text-align: left;
+    align-self: center;
+    margin-right: 50px;
+    color: #fff;
+}
 
 @media screen and (max-width: 768px) {
     header{

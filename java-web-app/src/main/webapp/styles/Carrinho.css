@@ -1,12 +1,11 @@
 
 body {
   margin: 0;
-  background: #f6f6f6;
   font-family: 'Roboto', sans-serif;
 }
 
 header{
-  background-color: #a79468d2;
+  background-color: #004aad;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,49 +13,40 @@ header{
   height: 100px;
 }
 
-
 img.header{
   display: inline-block;
 }
 
 #home{
-  height: 64px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 #logo{
-  width: 400px;
-  margin: 0 auto;
+  width: auto;
+height: 70px;
 }
 
 #user{
-  height: 64px;
-  margin-right: 20px;
+  height: 32px;
+  margin-right: 50px;
+}
+
+hr{
+  border-color: grey;
 }
 
 #carrinho{
   height: 10px;
 }
 
-body > header {
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 main{
-  background-color: #8f8263b4;
+  background-color: #dedfe0;
   display: block;
   padding-left: 100px;
   padding-right: 100px;
 }
 
 h1{
-  color: white;
   padding-left: 5px;
   font-size: 30px;
 }
@@ -89,17 +79,15 @@ button {
 table {
   width: 100%;
   margin: auto;
+  text-align: center;
 
-}
-
-th{
-  color: #f6f6f6;
 }
 
 table thead tr th {
 
   padding-bottom: 10px;
-  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
 
 }
 
@@ -113,6 +101,8 @@ table tbody tr:last-child {
 
 table tbody tr td {
   padding: 20px 0;
+  text-align: center;
+  vertical-align: center;
 }
 
 label{
@@ -125,7 +115,11 @@ p{
 }
 
 .cor-baixo{
-  color:#f6f6f6
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinhar à direita */
+  margin-left: auto; /* Move para a direita */
+  
 }
 
 .product {
@@ -146,7 +140,7 @@ p{
 }
 
 .sombra{
-  background-color: rgba(219, 216, 216, 0.514);
+  background-color: rgba(243, 243, 243, 0.87);
   border-radius: 30px;
   width: 200px;
   height: 170px;
@@ -228,8 +222,6 @@ hr{
   color: grey;
 }
 
-
-
 select{
   height: 20px;
   width: 150px;
@@ -243,9 +235,16 @@ select{
 {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 100px;
+  align-items: flex-start;  
+  color: black;
+}
 
+input{
+  text-decoration: none;
+  background-color: #bdbcbc6e;
+  border: none;
+  height: 30px;
+  border-radius: 8px;
 }
 
 .frete
@@ -256,12 +255,19 @@ select{
 }
 
 .baixo{
-  margin-left: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinhar à direita */
+  margin-left: auto; /* Move para a direita */
 }
 
 .valor-frete{
-  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinhar à direita */
+  margin-left: auto; /* Move para a direita */
 }
+
 
 .total{
   margin-left: 55px;
@@ -269,11 +275,10 @@ select{
 
 .valor-total
 {
-  display: flex;
-  margin-left: 600px;
   background-color: #bdbcbc6e;
-  height: 45px;
-  text-align: center;
+    height: 35px; /* Defina a altura desejada, como 25px */
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
 }
 
 .button{
@@ -285,20 +290,18 @@ select{
 }
 
 .btn-frete{
-  background-color: rgb(0, 0, 0);
-  color: #eee;
-  border-radius: 5px;
-  
+  border-radius: 8px;
+  width: auto;
+  height: 30px;
 }
 
 .btn-comprar{
-  margin-right: 0;
   display: flex;
   border: 2px solid #000;
   font-weight: bold;
   border-radius: 8px;
   height: 50px;
-  width: 250px;
+  width: 150px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -311,7 +314,7 @@ select{
 
 .ultimalinha{
   display: flex;
-  margin-left: 65%;
+  margin-left: 80%;
 }
 
 
@@ -322,7 +325,7 @@ select{
 /* barra de progresso*/
 .progress-bar {
   width: 100%;
-  background-color:rgba(122, 106, 83, 0.87);
+  background-color:#b4b4b498;
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
@@ -339,7 +342,7 @@ select{
   content: "";
   width: 20px;
   height: 20px;
-  background-color: #ccc;
+  background-color: #a7a7a7;
   border-radius: 50%;
   display: block;
   margin: 0 auto 10px;
@@ -351,12 +354,12 @@ select{
 }
 
 .step:last-child::before {
-  background-color: #ccc; /* Última etapa não concluída */
+  background-color: #a7a7a7; /* Última etapa não concluída */
 }
 
 /* Texto abaixo dos círculos */
 .step-text {
-  color: #fffdfd;
+  color: black;
 }
 
 /* Linhas entre os pontos */
@@ -383,8 +386,34 @@ a{
 }
 
 .link{
-  color: lightgray;
+  color: black;
   text-decoration: underline;
+}
+
+footer {
+  height: 70px;
+  background-color: #004aad;
+  display: flex;
+  padding: 10px 20px ;
+}
+
+.div-footer {
+  display: flex;
+  align-self: flex-start;
+  flex-grow: 1;
+}
+
+.footer-image {
+  align-self: flex-start;
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.footer-description {
+  text-align: left;
+  align-self: center;
+  margin-right: 50px;
+  color: #fff;
 }
 @media screen and (max-width: 768px) {
   header{

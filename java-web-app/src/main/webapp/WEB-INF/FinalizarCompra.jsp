@@ -14,9 +14,9 @@
 
 <body>
     <header>
-        <a href="Home.html"><img src="Imagens/home.svg" alt="home" id="home"></a>
-        <img src="Imagens/logo.png" alt="logo" id="logo">
-        <a href="/usuario"><img src="Imagens/user.png" alt="user" id="user"></a>
+        <a href="Home.jsp"><img src="Imagens/home.png" alt="home" id="home"></a>
+        <img src="Imagens/braG.png" alt="logo" id="logo">
+        <a href="/usuario"><img src="Imagens/perfil.png" alt="user" id="user"></a>
     </header>
     <div class="barra-progresso">
         <div class="step">
@@ -103,9 +103,16 @@
             </div>
         </div>
         <br><br>
-        
-        
     </main>
+    <footer>
+        <div class="div-footer">
+            <a href="https://www.instagram.com/"><img class="footer-image" src="Imagens/instagram.png" alt="instagram"></a>
+            <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facebook.png" alt="facebook"></a>
+            <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapp.png" alt="whatsapp"></a>
+        </div>
+        <div class="footer-description">Central de Atendimento </br> atendimento@nossosite.com </br> 00-00000-0000
+        </div>
+    </footer>
 </body>
 
 

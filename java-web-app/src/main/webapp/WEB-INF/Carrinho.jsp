@@ -16,15 +16,14 @@
   </head>
   <body>
     <header>
-
-      <a href="Home.html"><img src="Imagens/home.svg" alt="home" id="home"></a>
-        <img src="Imagens/logo.png" alt="logo" id="logo">
-        <img src="Imagens/do-utilizador (1).png" alt="user" id="user">
+      <a href="Home.jsp"><img src="Imagens/home.png" alt="home" id="home"></a>
+        <img class="header-logo" src="Imagens/braG.png" alt="logo" id="logo">
+        <img src="Imagens/perfil.png" alt="user" id="user">
     
       </header>
       <div class="progress-bar">
         <div class="step">
-            <div class="step-text">Carrinho</div>
+            <div class="step-text"><strong>Carrinho</strong></div>
             <div class="line"></div>
         </div>
         <div class="step">
@@ -34,12 +33,14 @@
         <div class="step">
             <div class="step-text">Confirmação de Pagamento</div>
         </div>
+        <hr>
     </div>
     <main>
       <div class="titulo">
         <img src="Imagens/icons8-carrinho-80.png" alt="carrinho">
         <h1>Carrinho de Compras</h1>
       </div>
+      <hr>
       <div class="content">
         <section>
           <table>
@@ -111,23 +112,23 @@
         </section>
 
       </div>
-      <br>
+      <hr>
       <br>
       <div class="calcular-frete">
-            <form>
-            <label for:="cep"><strong>FRETE:</strong> </label>
-                <input type="text" name="cep" placeholder="00000" size="5" maxlength="5"> - <input type="text" name="cep2" placeholder="000" size="3" maxlength="3">
+            <p>
+              <strong>Frete</strong>
+                <input type="text" name="cep" placeholder="00000-000" size="9" maxlength="9">
                 <button type="submit" class="btn-frete" >Calcular Frete</button>
-         </form>
+            </p>
       </div>
 <br>
-        <div class="baixo">
+      <div class="baixo">
         <div class="frete">
           <div class="cor-baixo">
             <p ><strong>Subtotal do Frete: </strong> </p>
           </div>
             <div class="valor-frete">
-               <p> <strong>R$ 10,00</strong></p> 
+               <p><strong> R$ 10,00</strong></p> 
             </div>
           </div> 
         <br>
@@ -144,20 +145,26 @@
         <br>
         <div class="ultimalinha">
           <div class="continue">
-            <a href="Home.html" class="link"><p><i>Continuar Comprando</i></p></a>
+            <a href="Home.jsp" class="link"><p><i>Continuar Comprando</i></p></a>
         
         </div>
         <div class="button">
-          <a href="FinalizarCompra.html">
+          <a href="FinalizarCompra.jsp">
             <button type="submit" class="btn-comprar"> Comprar</button>
           </a>
-          </div>
-          
-        </div>
-        
-        
+        </div>  
+      </div>
         <br>
         <br>
     </main>
+    <footer>
+      <div class="div-footer">
+          <a href="https://www.instagram.com/"><img class="footer-image" src="Imagens/instagram.png" alt="instagram"></a>
+          <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facebook.png" alt="facebook"></a>
+          <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapp.png" alt="whatsapp"></a>
+      </div>
+      <div class="footer-description">Central de Atendimento </br> atendimento@nossosite.com </br> 00-00000-0000
+      </div>
+  </footer>
   </body>
 </html>

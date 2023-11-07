@@ -10,19 +10,31 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles/Home.css'>
     <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
+    
 </head>
 <body>
     
     <header>
-        <img class="header-logo" src="Imagens/LogoObraGohome.png" alt="Logo">
-        <div class="header-text">
-            Produtos | Quem Somos? | Dúvidas
-        </div>
+        <img class="header-logo" src="Imagens/braG.png" alt="Logo">
+        <div class="dropdown">
+            <button class="dropbtn">Departamentos</button>
+            <div class="dropdown-content">
+                <a href="#">Materiais de Construção</a>
+                <a href="#">Materiais Hidráulicos</a>
+                <a href="#">Tintas e Acessórios</a>
+                <a href="#">Ferragens</a>
+                <a href="#">Materiais Elétricos</a>
+                <a href="#">Ferramentas</a>
+                <a href="#">Pisos e Revestimentos</a>
+            </div>
+        </div> 
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="O que você está procurando?"/>
+            <img src="Imagens/lupa.png" id="btnBusca" alt="Buscar"/>
+          </div>
         <div class="header-icons">
-            <img class="specific-icon" src="Imagens/icons8-pesquisar-50home.png" alt="pesquisar" id="pesquisar">
-            <a href="Carrinho.jsp"><img src="Imagens/icons8-carrinho-48home.png" alt="carrinho" id="carrinho"></a>
-            <img src="Imagens/icons8-user-64home.png" alt="usuario" id="">
-            <img class="header-menu-icon" src="Imagens/icons8-cardápio-50home.png" alt="menu" id="menu">
+            <a href="Carrinho.jsp"><img src="Imagens/carrinho.png" alt="carrinho" id="carrinho"></a>
+            <img src="Imagens/perfil.png" alt="usuario" id="usuario">
         </div>
     </header>
     <main>
@@ -98,9 +110,9 @@
     </main>
     <footer>
         <div class="div-footer">
-            <a href="https://www.instagram.com/"><img class="footer-image" src="Imagens/instahome.svg" alt="instagram"></a>
-            <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facehome.svg" alt="facebook"></a>
-            <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapphome.svg" alt="whatsapp"></a>
+            <a href="https://www.instagram.com/"><img class="footer-image" src="Imagens/instagram.png" alt="instagram"></a>
+            <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facebook.png" alt="facebook"></a>
+            <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapp.png" alt="whatsapp"></a>
         </div>
         <div class="footer-description">Central de Atendimento </br> atendimento@nossosite.com </br> 00-00000-0000
         </div>

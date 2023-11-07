@@ -5,11 +5,11 @@ body {
 
 
 header {
-    background-color: #847564;
+    background-color: #004aad;
     color: #fff;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
     padding: 10px 20px;
     height: 100px;
 }
@@ -21,9 +21,72 @@ header {
     margin-right: 10px;
 }
 
-.header-text {
-    flex-grow: 1;
-    text-align: center;
+.dropbtn{
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropbtn::after {
+    content: '';
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+#divBusca{
+    background-color:rgb(234, 235, 236);
+    border-radius:20px;
+    width:400px;
+    padding: 3px;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:360px;
+  }
+
+input {
+    border-right: none;
+    outline: none;
+    font-size: 14px;
+    cursor: text; 
 }
 
 .header-icons img {
@@ -44,8 +107,9 @@ header {
     cursor: pointer;
 }
 
+
 main {
-    background-color: #8f8263b4;
+    background-color: #dedfe0;
     display: block;
     padding-left: 100px;
     padding-right: 100px;
@@ -54,7 +118,7 @@ main {
 
 footer {
     height: 70px;
-    background-color: #847564;
+    background-color: #004aad;
     display: flex;
     padding: 10px 20px ;
 }
@@ -67,8 +131,6 @@ footer {
 
 .footer-image {
     align-self: flex-start;
-    width: 50px;
-    height: 50px;
     margin: 10px;
     margin-left: 20px;
 }
@@ -77,6 +139,7 @@ footer {
     text-align: left;
     align-self: center;
     margin-right: 50px;
+    color: #fff;
 }
 
 .grid-wrapper {
@@ -99,10 +162,11 @@ footer {
 }
 
 .grid-item {
-    background-color: #ccc;
+    
+    background-color: rgba(243, 243, 243, 0.87);
     padding: 50px;
     align-items: center;
-    border: 1px solid #999;
+   /*  border: 1px solid #999; */
     width: 200px;
     height: 300px;
     border-radius: 30px;
@@ -149,7 +213,8 @@ footer {
 }
 
 .grid-button {
-    background-color: #808080;
+    background-color: #004aad;
+    border-radius: 10px;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -159,7 +224,7 @@ footer {
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 @media (max-width: 768px) {
