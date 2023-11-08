@@ -49,8 +49,8 @@ main {
     padding: 50px;
     align-items: center;
     width: 55%;
-    height: 70vh;
     border-radius: 50px;
+    margin-bottom: 10%;
     transition: .5s ease-in;
     background-color: #f1f0f0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
