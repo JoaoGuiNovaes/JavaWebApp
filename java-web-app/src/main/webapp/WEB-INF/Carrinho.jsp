@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <a href="Home.jsp"><img src="Imagens/home.png" alt="home" id="home"></a>
+      <a href="Home"><img src="Imagens/home.png" alt="home" id="home"></a>
         <img class="header-logo" src="Imagens/braG.png" alt="logo" id="logo">
         <img src="Imagens/perfil.png" alt="user" id="user">
     
@@ -145,11 +145,11 @@
         <br>
         <div class="ultimalinha">
           <div class="continue">
-            <a href="Home.jsp" class="link"><p><i>Continuar Comprando</i></p></a>
+            <a href="Home" class="link"><p><i>Continuar Comprando</i></p></a>
         
         </div>
         <div class="button">
-          <a href="FinalizarCompra.jsp">
+          <a href="FinalizarCompra">
             <button type="submit" class="btn-comprar"> Comprar</button>
           </a>
         </div>  

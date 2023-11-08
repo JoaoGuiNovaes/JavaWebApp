@@ -17,7 +17,7 @@
                 <link rel="stylesheet" href="styles/login.css">
 
                 <title>
-                    <fmt:message key="login.title" />
+                    Login
                 </title>
             </head>
 
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="aindanao">
                                     <strong class="ainda">Ainda não tem uma conta?</strong>
-                                    <button type="button" class="btn btn-dark criar">Criar conta</button>
+                                   <a href="Cadastro"><button type="button" class="btn btn-dark criar">Criar conta</button></a> 
                                 </div>
                             </form>
                         </div>

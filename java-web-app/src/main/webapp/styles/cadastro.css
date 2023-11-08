@@ -50,7 +50,7 @@ main {
     flex-direction: column;
     padding: 50px;
     align-items: center;
-    width: 45%;
+    width: 55%;
     border-radius: 50px;
     transition: .5s ease-in;
     background-color: #f1f0f0;

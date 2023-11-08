@@ -17,7 +17,7 @@
                 <link rel="stylesheet" href="styles/cadastro.css">
 
                 <title>
-                    <fmt:message key="registration.title" />
+                    Login
                 </title>
             </head>
 
@@ -30,7 +30,7 @@
                     <div class="direita">
                         <div class="card container mt-5">
                             <h1>
-                                <fmt:message key="registration.title" />
+                                Cadastro
                             </h1>
                             <c:if test="${violations != null}">
                                 <h3>

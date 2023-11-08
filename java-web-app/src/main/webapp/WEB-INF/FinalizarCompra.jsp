@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <a href="Home.jsp"><img src="Imagens/home.png" alt="home" id="home"></a>
+        <a href="Home"><img src="Imagens/home.png" alt="home" id="home"></a>
         <img src="Imagens/braG.png" alt="logo" id="logo">
         <a href="/usuario"><img src="Imagens/perfil.png" alt="user" id="user"></a>
     </header>
