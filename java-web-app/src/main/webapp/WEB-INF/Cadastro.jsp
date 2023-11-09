@@ -17,7 +17,7 @@
                 <link rel="stylesheet" href="styles/cadastro.css">
 
                 <title>
-                    Login
+                    Cadastro
                 </title>
             </head>
 
@@ -34,7 +34,7 @@
                             </h1>
                             <c:if test="${violations != null}">
                                 <h3>
-                                    <fmt:message key="registration.message" />
+                                    Erros
                                     </h2>
                                     <ul>
                                         <c:forEach var="violation" items="${violations}">
