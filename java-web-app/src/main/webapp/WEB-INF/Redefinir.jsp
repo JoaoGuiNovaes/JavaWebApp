@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

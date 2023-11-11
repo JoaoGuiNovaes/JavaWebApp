@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" %>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-            <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
+           
+           <!DOCTYPE html>
             <html lang="pt-br">
 
             <head>
@@ -14,10 +15,10 @@
                 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&display=swap"
                     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
                     crossorigin="anonymous">
-                <link rel="stylesheet" href="styles/cadastro.css">
+                <link rel="stylesheet" href="styles/cadastroloja.css">
 
                 <title>
-                    Cadastro
+                    Cadastro de Loja
                 </title>
             </head>
 
@@ -30,7 +31,7 @@
                     <div class="direita">
                         <div class="card container mt-5">
                             <h1>
-                                Cadastro
+                                Cadastro de Loja
                             </h1>
                             <c:if test="${violations != null}">
                                 <h3>
@@ -42,18 +43,30 @@
                                         </c:forEach>
                                     </ul>
                             </c:if>
-                            <form action="Cadastro" method="post" id="form1">
-                                <label for="nome" class="form-label">Nome completo</label>
+                            <form action="CadastroLoja" method="post" id="form1">
+                                <label for="nome" class="form-label">Nome fantasia</label>
                                 <div class="input-group">
                                     <img class="icon" src="Imagens/nome.svg" alt="">
-                                    <input type="text" id="nome" name="nome" class="form-control"
-                                        placeholder="Digite seu nome" value="${nome}">
+                                    <input type="text" id="nome" name="nomeFantasia" class="form-control"
+                                        placeholder="Digite seu nome" value="${nomefantasia}">
+                                </div>
+                                <label for="nome" class="form-label">Razão Social</label>
+                                <div class="input-group">
+                                    <img class="icon" src="Imagens/nome.svg" alt="">
+                                    <input type="text" id="razaoSocial" name="razaoSocial" class="form-control"
+                                        placeholder="Digite sua razão social" value="${razaoSocial}">
                                 </div>
                                 <label for="email" class="form-label">E-mail</label>
                                 <div class="input-group">
                                     <img class="icon" src="Imagens/email.svg" alt="">
-                                    <input type="email" id="email" name="email" class="form-control"
+                                    <input type="text" id="email" name="email" class="form-control"
                                         placeholder="Digite seu E-mail" value="${email}">
+                                </div>
+                                <label for="cnpj" class="form-label">CNPJ</label>
+                                <div class="input-group">
+                                    <img class="icon" src="Imagens/email.svg" alt="">
+                                    <input type="text" id="cnpj" name="cnpj" class="form-control"
+                                        placeholder="Digite seu CNPJ" value="${cnpj}">
                                 </div>
                                 <label for="senha" class="form-label">Senha</label>
                                 <div class="input-group">
@@ -64,15 +77,10 @@
                                 <label for="confirmar_senha" class="form-label">Confirmar senha</label>
                                 <div class="input-group">
                                     <img class="icon" src="Imagens/lock.svg" alt="">
-                                    <input type="password" id="confirmar_senha" name="confirmarsenha"
-                                        class="form-control" placeholder="Confirme sua senha" value="${confirmarsenha}">
+                                    <input type="password" id="confirmarSenha" name="confirmarSenha"
+                                        class="form-control" placeholder="Confirme sua senha" value="${confirmarSenha}">
                                 </div>
-                                <label for="data_nascimento" class="form-label">Data de nascimento</label>
-                                <div class="input-group">
-                                    <img class="icon" src="Imagens/calendar.svg" alt="">
-                                    <input type="date" id="data_nascimento" name="datanascimento" class="form-control"
-                                        value="${datanascimento}">
-                                </div>
+    
                                 <div class="divbutton">
                                    
                                     <button type="submit" class="btn btn-dark">Cadastrar</button>

@@ -1,17 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/java-web-app/src/main/webapp/styles/Profile.css">
+    <link rel="stylesheet" href="styles/Profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Perfil</title>
 </head>
 <body>
     <header>
-        <a href="Home"><img src="/java-web-app/src/main/webapp/Imagens/home.png" alt="home" id="home"></a>
-        <img src="/java-web-app/src/main/webapp/Imagens/braG.png" alt="logo" id="logo">
-        <a href="Profile.html"><img src="/java-web-app/src/main/webapp/Imagens/perfil.png" alt="user" id="user"></a>
+        <a href="Home"><img src="Imagens/home.png" alt="home" id="home"></a>
+        <img src="Imagens/braG.png" alt="logo" id="logo">
+        <a href="Profile"><img src="Imagens/perfil.png" alt="user" id="user"></a>
     </header>
     <main>
         <br><br>
@@ -22,7 +26,7 @@
                     <div class="card mb-6 ">
                         <div class="card-header">Meu Perfil</div>
                         <div class="card-body">
-                            <form>
+                            <form action="Login" method="post">
                                 <!-- Form Group (username)-->
                                 <div class="mb-3">
                                     <label class="small mb-1" for="nome">Nome </label>
@@ -74,7 +78,7 @@
                                     <input class="form-control" id="data_nascimento" name="datanascimento" type="date" value="${datanascimento}">
                                 </div>
                                 <!-- Save changes button-->
-                                <button class="btn btn-primary" type="button">Salvar Alterações</button>
+                                <button class="btn btn-primary" type="submit">Salvar Alterações</button>
                             </form>
                         </div>
                     </div>
@@ -85,9 +89,9 @@
     </main>
     <footer>
         <div class="div-footer">
-            <a href="https://www.instagram.com/"><img class="footer-image" src="/java-web-app/src/main/webapp/Imagens/instagram.png" alt="instagram"></a>
-            <a href="https://www.facebook.com/"><img class="footer-image" src="/java-web-app/src/main/webapp/Imagens/facebook.png" alt="facebook"></a>
-            <a href="https://web.whatsapp.com/"><img class="footer-image" src="/java-web-app/src/main/webapp/Imagens/whatsapp.png" alt="whatsapp"></a>
+            <a href="https://www.instagram.com/"><img class="footer-image" src="Imagens/instagram.png" alt="instagram"></a>
+            <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facebook.png" alt="facebook"></a>
+            <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapp.png" alt="whatsapp"></a>
         </div>
         <div class="footer-description">Central de Atendimento </br> atendimento@nossosite.com </br> 00-00000-0000
         </div>
