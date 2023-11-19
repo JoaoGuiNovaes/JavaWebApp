@@ -70,8 +70,8 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="small mb-1" for="pontoreferencia">Ponto de Referência</label>
-                                    <input class="form-control" id="pontoreferencia" name="pontoreferencia" type="text" value="${pontoreferencia}">
+                                    <label class="small mb-1" for="pontoReferencia">Ponto de Referência</label>
+                                    <input class="form-control" id="pontoReferencia" name="pontoReferencia" type="text" value="${pontoReferencia}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="data_nascimento">Data de Nascimento</label>

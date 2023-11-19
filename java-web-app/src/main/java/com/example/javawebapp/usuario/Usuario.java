@@ -15,6 +15,17 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
+    
+
+    public Usuario(Integer id, String nome, String email, String dataNascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.dataNascimento = dataNascimento;
+    }
+
+
+
     public Integer getId() {
         return id;
     }
