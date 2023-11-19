@@ -59,8 +59,11 @@
                             placeholder="Digite sua senha" value="${senha}">
                     </div>
                     <div class="divbutton">
-                        <button type="button" class="btn btn-light"><fmt:message key="login.buttonCancel" /></button>
                         <button type="submit" class="btn btn-dark"><fmt:message key="login.button" /></button>
+                        <div class="aindanao">
+                            <strong class="ainda redefinir"><fmt:message key="login.redefine" /></strong>
+                        <a href="Redefinir"><button type="button" class="btn btn-light criar "><fmt:message key="login.buttonRedefine" /></button></a> 
+                        </div>
                     </div>
                     <div class="aindanao">
                         <strong class="ainda"><fmt:message key="login.notAccount" /></strong>

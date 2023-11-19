@@ -76,6 +76,10 @@
                     <div class="divbutton">
                         
                         <button type="submit" class="btn btn-dark"><fmt:message key="registration.buttonRegister" /></button>
+                        <div class="aindanao">
+                            <strong class="ainda"><fmt:message key="registration.login" /></strong>
+                            <a href="Login"><button type="button" class="btn btn-light criar eita"><fmt:message key="registration.loginButton" /></button></a> 
+                        </div>
                     </div>
                 </form>
             </div>
