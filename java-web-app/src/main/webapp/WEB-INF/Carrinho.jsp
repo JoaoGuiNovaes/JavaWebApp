@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,7 +7,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ObraGO</title>
+    <title>
+      <fmt:message key="cart.title" />
+    </title>
     <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
     <link rel="stylesheet"  href="styles/Carrinho.css" />
     <link
@@ -23,22 +26,22 @@
       </header>
       <div class="progress-bar">
         <div class="step">
-            <div class="step-text"><strong>Carrinho</strong></div>
+            <div class="step-text"><strong><fmt:message key="cart.progress1" /></strong></div>
             <div class="line"></div>
         </div>
         <div class="step">
-            <div class="step-text">Finalizar Compra</div>
+            <div class="step-text"><fmt:message key="cart.progress2" /></div>
             <div class="line"></div>
         </div>
         <div class="step">
-            <div class="step-text">Confirmação de Pagamento</div>
+            <div class="step-text"><fmt:message key="cart.progress3" /></div>
         </div>
         <hr>
     </div>
     <main>
       <div class="titulo">
         <img src="Imagens/icons8-carrinho-80.png" alt="carrinho">
-        <h1>Carrinho de Compras</h1>
+        <h1><fmt:message key="cart.title" /></h1>
       </div>
       <hr>
       <div class="content">
@@ -46,9 +49,9 @@
           <table>
             <thead>
               <tr>
-                <th><strong>Produto</strong> </th>
-                <th><strong>Quantidade</strong></th>
-                <th><strong>Valor</strong></th>
+                <th><strong><fmt:message key="cart.product" /></strong> </th>
+                <th><strong><fmt:message key="cart.amount" /></strong></th>
+                <th><strong><fmt:message key="cart.value" /></strong></th>
                 
               </tr>
             </thead>
@@ -60,7 +63,7 @@
                     <img src="Imagens/sacotijolo.jpg" alt="img" />
                     </div>
                     <div class="info">
-                      <div class="name"> <strong> Tijolo em Saco com 10 Peças</strong></div>
+                      <div class="name"> <strong><fmt:message key="cart.nameProduct1" /></strong></div>
 
                     </div>
                   </div>
@@ -86,7 +89,7 @@
                     <img src="Imagens/argamassa.jpg" alt="img" />
                     </div>
                     <div class="info">
-                      <div class="name"><strong>Argamassa  Polimérica Biomassa 0,3 Kg</strong></div>
+                      <div class="name"><strong><fmt:message key="cart.nameProduct2" /></strong></div>
 
                     </div>
                   </div>
@@ -116,16 +119,16 @@
       <br>
       <div class="calcular-frete">
             <p>
-              <strong>Frete</strong>
+              <strong><fmt:message key="cart.freight" /></strong>
                 <input type="text" name="cep" placeholder="00000-000" size="9" maxlength="9">
-                <button type="submit" class="btn-frete" >Calcular Frete</button>
+                <button type="submit" class="btn-frete" ><fmt:message key="cart.calculateFreight" /></button>
             </p>
       </div>
 <br>
       <div class="baixo">
         <div class="frete">
           <div class="cor-baixo">
-            <p ><strong>Subtotal do Frete: </strong> </p>
+            <p><strong><fmt:message key="cart.freightSubtotal" /></strong></p>
           </div>
             <div class="valor-frete">
                <p><strong> R$ 10,00</strong></p> 
@@ -135,7 +138,7 @@
         
         <div class="valor-total">
           <div class="cor-baixo">
-            <p><strong>Valor Total: </strong></p>
+            <p><strong><fmt:message key="cart.totalAmount" /></strong></p>
             </div>
             <div class="total">
                 <p><strong> R$ 40,00</strong></p> 
@@ -145,12 +148,12 @@
         <br>
         <div class="ultimalinha">
           <div class="continue">
-            <a href="Home" class="link"><p><i>Continuar Comprando</i></p></a>
+            <a href="Home" class="link"><p><i><fmt:message key="cart.buttonContinue" /></i></p></a>
         
         </div>
         <div class="button">
           <a href="FinalizarCompra">
-            <button type="submit" class="btn-comprar"> Comprar</button>
+            <button type="submit" class="btn-comprar"><fmt:message key="cart.buttonPurchase" /></button>
           </a>
         </div>  
       </div>
@@ -163,7 +166,7 @@
           <a href="https://www.facebook.com/"><img class="footer-image" src="Imagens/facebook.png" alt="facebook"></a>
           <a href="https://web.whatsapp.com/"><img class="footer-image" src="Imagens/whatsapp.png" alt="whatsapp"></a>
       </div>
-      <div class="footer-description">Central de Atendimento </br> atendimento@nossosite.com </br> 00-00000-0000
+      <div class="footer-description"><fmt:message key="cart.callCenter" /></br><fmt:message key="cart.emailService" /></br><fmt:message key="cart.location" />
       </div>
   </footer>
   </body>

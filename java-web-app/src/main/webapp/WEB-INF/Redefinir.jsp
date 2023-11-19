@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,13 +8,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrfinalizePurchaseap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&display=swap" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/redefinir.css">
 
-    <title>Redefinir Senha</title>
+    <title>
+        <fmt:message key="redefinePassword.title" />
+    </title>
 </head>
 
 <body>
@@ -24,15 +27,17 @@
         </div>
         <div class="direita">
             <div class="card container mt-5">
-                <h1>Redefinir Senha</h1>
+                <h1>
+                    <fmt:message key="redefinePassword.title" />
+                </h1>
                 <form action="Redefinir" method="post">
-                    <label for="senha" class="form-label">Nova senha</label>
+                    <label for="senha" class="form-label"><fmt:message key="redefinePassword.newPassword" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="senha" name="senha" class="form-control" required
                             placeholder="Digite sua senha">
                     </div>
-                    <label for="confirmarsenha" class="form-label">Confirmar nova senha</label>
+                    <label for="confirmarsenha" class="form-label"><fmt:message key="redefinePassword.c_password" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="confirmarsenha" name="confirmarsenha" class="form-control" required
@@ -41,7 +46,7 @@
                     
                     <div class="divbutton">
                     
-                        <button type="submit" class="btn btn-dark">Redefinir</button>
+                        <button type="submit" class="btn btn-dark"><fmt:message key="redefinePassword.buttonRedefine" /></button>
                     </div>
                 </form>
             </div>
