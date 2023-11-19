@@ -10,14 +10,15 @@ main {
     width: 100%;
 }
 
-
+.eita{
+    margin-top: 2% !important;
+}
 
 .esquerda {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
     width: 34vw;
     flex-direction: column;
     background-color: #004aad;
@@ -111,12 +112,20 @@ form {
 .divbutton {
     width: 100%;
     display: flex;
+    flex-direction: column;
+}
+
+.aindanao{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 button {
     margin-top: 10%;
     margin-left: 15%;
-    width: 50%
+    width: 65%
 }
 
 .btn-light {
@@ -135,19 +144,28 @@ li {
         flex-direction: column;
     }
 
+    .input-group{
+        margin-left: 20px;
+    }
+
+    .icon{
+        display: none;
+    }
+
     .direita {
         width: 100vw;
-        height: 82vh;
+        height: 75vh;
     }
 
     .esquerda {
         width: 100vw;
-        height: 18vh;
+        height: 25vh;
     }
 
     .logo {
+        padding: 25px;
         height: auto;
-        width: auto;
+        width: 65%;
     }
 
     form {
@@ -162,6 +180,7 @@ li {
         /* flex-wrap: wrap; */
         /* width: 70vw; */
         /* height: 60vh; */
+        justify-content: center;
         align-items: center;
         /* overflow: auto; */
     }
