@@ -30,16 +30,17 @@
                                 <!-- Form Group (username)-->
                                 <div class="mb-3">
                                     <label class="small mb-1" for="nome">Nome </label>
-                                    <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome" value="<%= request.getAttribute("nome")%>">
+                                    <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome" value="${usuario.nome}">
                                 </div>
                                 <!-- Form Group (email address)-->
                                 <div class="mb-3">
                                     <label class="small mb-1" for="email">E-mail</label>
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="Digite seu email" value="${email}">
+
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="Digite seu email" value="${usuario.email}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="endereco">CEP</label>
-                                    <input class="form-control" id="cep" name="cep" type="text" placeholder="Digite seu CEP" value="${cep}">
+                                    <input class="form-control" id="cep" name="cep" type="text" placeholder="Digite seu CEP" value="${endereco.cep}">
                                 </div>
                                 <div class="row gx-3 mb-3">
                                     <div class="col-md-8">
@@ -75,7 +76,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="data_nascimento">Data de Nascimento</label>
-                                    <input class="form-control" id="data_nascimento" name="datanascimento" type="date" value="${datanascimento}">
+                                    <input class="form-control" id="data_nascimento" name="datanascimento" type="date" value="${usuario.dataNascimento}">
                                 </div>
                                 <!-- Save changes button-->
                                 <button class="btn btn-primary" type="submit">Salvar Alterações</button>

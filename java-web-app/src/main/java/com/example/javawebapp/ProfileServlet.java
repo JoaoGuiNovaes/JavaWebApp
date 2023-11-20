@@ -3,6 +3,8 @@ package com.example.javawebapp;
 import java.io.IOException;
 import java.util.Set;
 
+import com.example.javawebapp.endereco.Endereco;
+import com.example.javawebapp.endereco.EnderecoDao;
 import com.example.javawebapp.forms.ProfileForm;
 import com.example.javawebapp.usuario.Usuario;
 import com.example.javawebapp.usuario.UsuarioDao;
@@ -17,16 +19,18 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.validation.ConstraintViolation;
 
 
-@WebServlet(name = "Profile", value = "/Profile")
+@WebServlet(name = "profileServlet", value = "/Profile")
 public class ProfileServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession();
         String emailUsuario = (String) session.getAttribute("emailUsuario");
+        Integer id = (Integer) session.getAttribute("id");
         Usuario usuario = UsuarioDao.buscarPorEmail(emailUsuario);
-        
+        Endereco endereco = EnderecoDao.buscarPorIdEndereco(id);
         req.setAttribute("usuario", usuario);
+        req.setAttribute("endereco", endereco);
         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
     }
 
