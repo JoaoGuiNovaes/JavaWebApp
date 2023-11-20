@@ -30,7 +30,7 @@
                                 <!-- Form Group (username)-->
                                 <div class="mb-3">
                                     <label class="small mb-1" for="nome">Nome </label>
-                                    <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome" value="${nome}">
+                                    <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome" value="<%= request.getAttribute("nome")%>">
                                 </div>
                                 <!-- Form Group (email address)-->
                                 <div class="mb-3">

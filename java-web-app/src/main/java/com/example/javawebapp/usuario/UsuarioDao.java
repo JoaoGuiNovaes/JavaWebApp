@@ -221,28 +221,25 @@ public class UsuarioDao {
         
         try (
             Connection connection = Conexao.getConnection();
-            PreparedStatement statement = connection
-                .prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = connection.prepareStatement(sql);
         ) {
             statement.setString(1, nome);
             statement.setString(2, email);
             statement.setString(3, dataNascimento);
-            statement.executeUpdate();
-
-            ResultSet rs = statement.getGeneratedKeys();
-
-            if(rs.next()) {
-                usuario = new Usuario(rs.getInt(1), nome, email, dataNascimento);
+            statement.setInt(4, id);
+            int linhasAfetadas = statement.executeUpdate();
+    
+            if (linhasAfetadas > 0) {
+                usuario = new Usuario(id, nome, email, dataNascimento);
             }
-
-            rs.close();
-
+    
             return usuario;  
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
+    
 
     public static Endereco atualizarEndereco(Integer id, String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia) {
         Endereco endereco2 = null;
@@ -250,8 +247,7 @@ public class UsuarioDao {
         
         try (
             Connection connection = Conexao.getConnection();
-            PreparedStatement statement = connection
-                .prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = connection.prepareStatement(sql);
         ) {
             statement.setString(1, cep);
             statement.setString(2, endereco);
@@ -261,21 +257,19 @@ public class UsuarioDao {
             statement.setString(6, estado);
             statement.setString(7, cidade);
             statement.setString(8, pontoReferencia);
-            statement.executeUpdate();
-
-            ResultSet rs = statement.getGeneratedKeys();
-
-            if(rs.next()) {
-                endereco2 = new Endereco(rs.getInt(1), cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
+            statement.setInt(9, id);
+            int linhasAfetadas = statement.executeUpdate();
+    
+            if (linhasAfetadas > 0) {
+                endereco2 = new Endereco(id, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
             }
-
-            rs.close();
-
+    
             return endereco2;  
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
+    
 }
 
