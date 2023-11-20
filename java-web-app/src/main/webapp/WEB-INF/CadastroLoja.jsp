@@ -48,7 +48,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
                         <input type="text" id="nome" name="nomeFantasia" class="form-control"
-                            placeholder="Digite seu nome" value="${cadastroLojaForm.nomefantasia}">
+                            placeholder="Digite seu nome" value="${cadastroLojaForm.nomeFantasia}">
                     </div>
                     <label for="nome" class="form-label"><fmt:message key="storeRegistration.company" /></label>
                     <div class="input-group">

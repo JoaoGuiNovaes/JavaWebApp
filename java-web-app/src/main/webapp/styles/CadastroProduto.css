@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color:#dedfe0 !important;
+    
+}
+
+header{
+    background-color: #004aad;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100px;
+}
+
+img.header{
+    display: inline-block;
+}
+
+#home{
+    margin-left: 50px;
+}
+
+#logo{
+    width: auto;
+  height: 70px;
+}
+
+#user{
+    height: 32px;
+    margin-right: 50px;
+}
+
+main{
+    background-color: #dedfe0;
+} 
+
+.conteudo {
+    flex: 1; /* Isso faz com que o conteúdo ocupe todo o espaço disponível */
+    padding: 20px;
+}
+
+p{
+    text-align: left;
+}
+
+h11 {
+    color:red;
+}
+
+.panel-heading{
+    font-size:150%;
+    background-color: #dedfe0 !important;
+    color: black !important;
+    border-color: black !important;
+    text-align: left;
+}
+
+.panel-body{
+    background-color: #dedfe0;
+}
+
+.panel-primary {
+    border: none !important;
+}
+
+#fichatecnica{
+    height: 80px ;
+}
+
+.botao{
+    text-align: left;
+}
