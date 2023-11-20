@@ -38,7 +38,7 @@
           </div>
         <div class="header-icons">
             <a href="Carrinho"><img src="Imagens/carrinho.png" alt="carrinho" id="carrinho"></a>
-            <img src="Imagens/perfil.png" alt="usuario" id="usuario">
+            <a href="Profile"><img src="Imagens/perfil.png" alt="usuario" id="usuario"></a>
         </div>
     </header>
     <main>

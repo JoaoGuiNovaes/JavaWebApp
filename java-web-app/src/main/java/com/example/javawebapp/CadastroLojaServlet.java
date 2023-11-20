@@ -42,7 +42,7 @@ public class CadastroLojaServlet extends HttpServlet {
                 req.getRequestDispatcher("WEB-INF/CadastroLoja.jsp").forward(req, res);
             } else {
                 LojaDAO.cadastrar(nomeFantasia, email, razaoSocial, cnpj, senha);
-                res.sendRedirect("Login");
+                res.sendRedirect("LoginLoja");
             }
         } else {
             req.setAttribute("cadastroLojaForm", cadastroLojaForm);

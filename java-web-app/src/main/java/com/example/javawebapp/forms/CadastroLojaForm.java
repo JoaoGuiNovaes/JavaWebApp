@@ -15,7 +15,7 @@ public class CadastroLojaForm {
     @NotBlank
     @Email
     private String email;
-    @NotNull
+    @NotNull    
     @NotBlank
     private String razaoSocial;
     @NotBlank
@@ -30,7 +30,7 @@ public class CadastroLojaForm {
     @NotNull
     @Size(min = 4, max = 30)
     private String confirmarSenha;
-    
+
     public CadastroLojaForm(@NotNull @NotBlank String nomeFantasia, @NotNull @NotBlank @Email String email,
             @NotNull @NotBlank String razaoSocial, @NotBlank @NotNull @CNPJ String cnpj,
             @NotNull @NotBlank @Size(min = 4, max = 30) String senha,

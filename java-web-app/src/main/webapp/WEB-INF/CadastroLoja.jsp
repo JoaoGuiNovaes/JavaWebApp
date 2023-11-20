@@ -48,37 +48,37 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
                         <input type="text" id="nome" name="nomeFantasia" class="form-control"
-                            placeholder="Digite seu nome" value="${nomefantasia}">
+                            placeholder="Digite seu nome" value="${cadastroLojaForm.nomefantasia}">
                     </div>
                     <label for="nome" class="form-label"><fmt:message key="storeRegistration.company" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
                         <input type="text" id="razaoSocial" name="razaoSocial" class="form-control"
-                            placeholder="Digite sua razão social" value="${razaoSocial}">
+                            placeholder="Digite sua razão social" value="${cadastroLojaForm.razaoSocial}">
                     </div>
                     <label for="email" class="form-label"><fmt:message key="storeRegistration.email" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/email.svg" alt="">
                         <input type="text" id="email" name="email" class="form-control"
-                            placeholder="Digite seu E-mail" value="${email}">
+                            placeholder="Digite seu E-mail" value="${cadastroLojaForm.email}">
                     </div>
                     <label for="cnpj" class="form-label"><fmt:message key="storeRegistration.ein" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/email.svg" alt="">
                         <input type="text" id="cnpj" name="cnpj" class="form-control"
-                            placeholder="Digite seu CNPJ" value="${cnpj}">
+                            placeholder="Digite seu CNPJ" value="${cadastroLojaForm.cnpj}">
                     </div>
                     <label for="senha" class="form-label"><fmt:message key="storeRegistration.password" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="senha" name="senha" class="form-control"
-                            placeholder="Digite sua senha" value="${senha}">
+                            placeholder="Digite sua senha" value="${cadastroLojaForm.senha}">
                     </div>
                     <label for="confirmar_senha" class="form-label"><fmt:message key="storeRegistration.c_password" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="confirmarSenha" name="confirmarSenha"
-                            class="form-control" placeholder="Confirme sua senha" value="${confirmarSenha}">
+                            class="form-control" placeholder="Confirme sua senha" value="${cadastroLojaForm.confirmarSenha}">
                     </div>
 
                     <div class="divbutton">

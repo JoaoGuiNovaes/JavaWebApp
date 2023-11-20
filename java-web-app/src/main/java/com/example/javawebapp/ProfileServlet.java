@@ -52,21 +52,21 @@ public class ProfileServlet extends HttpServlet {
         
         Set<ConstraintViolation<ProfileForm>> violations = ValidatorUtil.validateObject(profileForm);
         
-        if (violations.isEmpty()) {
-            if (UsuarioDao.existeComEmail(email)) {
-                // mandar erro na tela
-                req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
-                req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
-            } else {
-                UsuarioDao.atualizarUsuario(null, nome, email, dataNascimento);
-                UsuarioDao.atualizarEndereco(null, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
-                res.sendRedirect("Profile");
-            }
-        } else {
-            req.setAttribute("cadastroForm", profileForm);
-            req.setAttribute("violations", violations);
-            req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
-        }
+    //     if (violations.isEmpty()) {
+    //         if (UsuarioDao.existeComEmail(email)) {
+    //             // mandar erro na tela
+    //             req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
+    //             req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
+    //         } else {
+    //             UsuarioDao.atualizarUsuario(null, nome, email, dataNascimento);
+    //             UsuarioDao.atualizarEndereco(null, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
+    //             res.sendRedirect("Profile");
+    //         }
+    //     } else {
+    //         req.setAttribute("cadastroForm", profileForm);
+    //         req.setAttribute("violations", violations);
+    //         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
+    //     }
 
-    }
-}
+    // }
+}}
