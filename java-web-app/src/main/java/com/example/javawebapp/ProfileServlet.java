@@ -25,10 +25,12 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession();
+      
+    
         String emailUsuario = (String) session.getAttribute("emailUsuario");
-        Integer id = (Integer) session.getAttribute("id");
+        Integer idUsuarioLogado = UsuarioDao.buscarPorEmail(emailUsuario).getId();
         Usuario usuario = UsuarioDao.buscarPorEmail(emailUsuario);
-        Endereco endereco = EnderecoDao.buscarPorIdEndereco(id);
+        Endereco endereco = EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado);
         req.setAttribute("usuario", usuario);
         req.setAttribute("endereco", endereco);
         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);

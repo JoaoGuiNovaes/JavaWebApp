@@ -45,34 +45,34 @@
                                 <div class="row gx-3 mb-3">
                                     <div class="col-md-8">
                                         <label class="small mb-1" for="endereco">Endereço</label>
-                                        <input class="form-control" id="endereco" name="endereco" type="text" placeholder="Digite seu endereço" value="${endereco}">
+                                        <input class="form-control" id="endereco" name="endereco" type="text" placeholder="Digite seu endereço" value="${endereco.endereco}">
                                     </div>
                                     <div class="col-md-4">
                                         <label class="small mb-1" for="numero">Número</label>
-                                        <input class="form-control" id="numero" name="numero" type="text" placeholder="Ex: 123" value="${numero}">
+                                        <input class="form-control" id="numero" name="numero" type="text" placeholder="Ex: 123" value="${endereco.numero}">
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="complemento">Complemento</label>
-                                    <input class="form-control" id="complemento" type="text" name="complemento" placeholder="Ex: Apto 12" value="${complemento}">
+                                    <input class="form-control" id="complemento" type="text" name="complemento" placeholder="Ex: Apto 12" value="${endereco.complemento}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="bairro">Bairro</label>
-                                    <input class="form-control" id="bairro" type="text" name="bairro" placeholder="Digite seu bairro" value="${bairro}">
+                                    <input class="form-control" id="bairro" type="text" name="bairro" placeholder="Digite seu bairro" value="${endereco.bairro}">
                                 </div>
                                 <div class="row gx-3 mb-3">
                                     <div class="col-md-6">
                                         <label class="small mb-1" for="estado">Estado</label>
-                                        <input class="form-control" id="estado" name="estado" type="text" placeholder="Digite seu estado" value="${estado}">
+                                        <input class="form-control" id="estado" name="estado" type="text" placeholder="Digite seu estado" value="${endereco.estado}">
                                     </div>
                                     <div class="col-md-6">
                                         <label class="small mb-1" for="cidade">Cidade</label>
-                                        <input class="form-control" id="cidade" name="cidade" type="text" placeholder="Digite sua cidade" value="${cidade}">
+                                        <input class="form-control" id="cidade" name="cidade" type="text" placeholder="Digite sua cidade" value="${endereco.cidade}">
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="pontoReferencia">Ponto de Referência</label>
-                                    <input class="form-control" id="pontoReferencia" name="pontoReferencia" type="text" value="${pontoReferencia}">
+                                    <input class="form-control" id="pontoReferencia" name="pontoReferencia" type="text" value="${endereco.pontoReferencia}">
                                 </div>
                                 <div class="mb-3">
                                     <label class="small mb-1" for="data_nascimento">Data de Nascimento</label>

@@ -41,7 +41,7 @@ public class EnderecoDao {
         }
     }
 
-    public static Endereco buscarPorIdEndereco(Integer id) {
+    public static Endereco buscarPorIdUsuarioEndereco(Integer id) {
         String sql = "SELECT * FROM enderecos WHERE id = ?;";
 
         try (
