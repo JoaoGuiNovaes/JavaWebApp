@@ -1,11 +1,17 @@
 package com.example.javawebapp;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Set;
+import java.util.UUID;
 
 import com.example.javawebapp.forms.CadastroLojaForm;
+import com.example.javawebapp.forms.CadastroProdutoForm;
 import com.example.javawebapp.loja.LojaDAO;
+import com.example.javawebapp.produto.ProdutoDAO;
 import com.example.javawebapp.validators.ValidatorUtil;
 
 import jakarta.servlet.ServletException;
@@ -29,32 +35,23 @@ public class CadastroProdutoServlet extends HttpServlet {
         String categoria = req.getParameter("categoria");
         String fichaTecnica = req.getParameter("fichaTecnica");
         String preco = req.getParameter("preco");
+        String imagem = req.getParameter("imagem");
+                
+       
 
-                // Obtendo a Part correspondente à imagem
-        Part filePart = req.getPart("imagem");
-
-        // Convertendo Part para InputStream
-        InputStream inputStream = filePart.getInputStream();
-
-
-
-           CadastroLojaForm cadastroLojaForm = new CadastroLojaForm(nomeFantasia, email, razaoSocial, cnpj, senha, confirmarSenha);
+           CadastroProdutoForm cadastroProdutoForm = new CadastroProdutoForm(nomeProduto, categoria, fichaTecnica, preco);
         
-        Set<ConstraintViolation<CadastroLojaForm>> violations = ValidatorUtil.validateObject(cadastroLojaForm);
+        Set<ConstraintViolation<CadastroProdutoForm>> violations = ValidatorUtil.validateObject(cadastroProdutoForm);
         
         if (violations.isEmpty()) {
-            if (LojaDAO.existeComEmail(email)) {
-                // mandar erro na tela
-                req.setAttribute("existeErro", "Já existe uma loja com esse e-mail");
-                req.getRequestDispatcher("WEB-INF/CadastroLoja.jsp").forward(req, res);
-            } else {
-                LojaDAO.cadastrar(nomeFantasia, email, razaoSocial, cnpj, senha);
-                res.sendRedirect("LoginLoja");
-            }
+          
+                ProdutoDAO.cadastrar(nomeProduto, categoria, fichaTecnica, preco, imagem);
+                res.sendRedirect("CadastroProduto");
+            
         } else {
-            req.setAttribute("cadastroLojaForm", cadastroLojaForm);
+            req.setAttribute("cadastroProdutoForm", cadastroProdutoForm);
             req.setAttribute("violations", violations);
-            req.getRequestDispatcher("WEB-INF/CadastroLoja.jsp").forward(req, res);
+            req.getRequestDispatcher("WEB-INF/CadastroProduto.jsp").forward(req, res);
         }
 
     }

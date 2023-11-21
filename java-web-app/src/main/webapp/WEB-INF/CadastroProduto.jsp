@@ -21,7 +21,7 @@
         <a href="/usuario"><img src="Imagens/perfil.png" alt="user" id="user"></a>
     </header>
     <main>
-        <form class="form-horizontal" method="post" action="CadastroProduto" enctype="multipart/form-data">
+        <form class="form-horizontal" method="post" action="CadastroProduto">
             <fieldset>
             <div class="panel panel-primary">
                 <div class="panel-heading">Cadastro de Produto</div>
@@ -59,7 +59,7 @@
             <div class="form-group">
                 <label class="col-md-2 control-label" for="nomeproduto">Imagem do Produto <h11>*</h11></label>  
                 <div class="col-md-8">
-                <input id="imagem" name="imagem" placeholder="" class="form-control input-md" required="" type="file" accept="image/jpeg, image/jpg, image/png">
+                <input id="imagem" name="imagem" placeholder="" class="form-control input-md" required="" type="text">
                 </div>
             </div>
 

@@ -12,27 +12,27 @@ import com.example.javawebapp.db.Conexao;
 
 // DAO = Data Access Object
 public class ProdutoDAO {
-    public static Produto cadastrar(String nome, Double preco, String categoria, String descricao, String Imagem) {
+    public static Produto cadastrar(String nomeProduto, String categoria, String descricao, String preco, String imagem) {
         Produto produto = null;
         
-        String sql = "INSERT INTO produtos (nome, preco, categoria, descricao, imagem) VALUES (?, ?, ?, ?. ?);";
+        String sql = "INSERT INTO produtos (nomeProduto, categoria, fichaTecnica, preco, imagem) VALUES (?, ?, ?, ?, ?);";
         
         try (
             Connection connection = Conexao.getConnection();
             PreparedStatement statement = connection
                 .prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
         ) {
-            statement.setString(1, nome);
-            statement.setDouble(2, preco);
-            statement.setString(3, categoria);
-            statement.setString(4, descricao);
-            statement.setString(5, Imagem);
+            statement.setString(1, nomeProduto);
+            statement.setString(2, categoria);
+            statement.setString(3, descricao);
+            statement.setString(4, preco);
+            statement.setString(5, imagem);
             statement.executeUpdate();
 
             ResultSet rs = statement.getGeneratedKeys();
 
             if(rs.next()) {
-                produto = new Produto(rs.getInt(1), nome, preco, categoria, descricao, Imagem);
+                produto = new Produto(rs.getInt(1), nomeProduto, preco, categoria, descricao, imagem);
             }
 
             rs.close();

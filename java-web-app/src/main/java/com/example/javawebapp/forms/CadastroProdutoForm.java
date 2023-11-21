@@ -10,84 +10,57 @@ import jakarta.validation.constraints.Size;
 public class CadastroProdutoForm {
     @NotNull
     @NotBlank
-    private String nomeFantasia;
+    private String nomeProduto;
     @NotNull
     @NotBlank
-    @Email
-    private String email;
+    private String categoria;
     @NotNull    
     @NotBlank
-    private String razaoSocial;
+    private String fichaTecnica;
     @NotBlank
     @NotNull
-    private String cnpj;
-    @NotNull
-    @NotBlank
-    @Size(min = 4, max = 30)
-    private String senha;
-    @NotBlank
-    @NotNull
-    @Size(min = 4, max = 30)
-    private String confirmarSenha;
+    private String preco;
 
-    public CadastroLojaForm(@NotNull @NotBlank String nomeFantasia, @NotNull @NotBlank @Email String email,
-            @NotNull @NotBlank String razaoSocial, @NotBlank @NotNull @CNPJ String cnpj,
-            @NotNull @NotBlank @Size(min = 4, max = 30) String senha,
-            @NotBlank @NotNull @Size(min = 4, max = 30) String confirmarSenha) {
-        this.nomeFantasia = nomeFantasia;
-        this.email = email;
-        this.razaoSocial = razaoSocial;
-        this.cnpj = cnpj;
-        this.senha = senha;
-        this.confirmarSenha = confirmarSenha;
+    public CadastroProdutoForm(@NotNull @NotBlank String nomeProduto, @NotNull @NotBlank String categoria,
+            @NotNull @NotBlank String fichaTecnica, @NotBlank @NotNull String preco) {
+        this.nomeProduto = nomeProduto;
+        this.categoria = categoria;
+        this.fichaTecnica = fichaTecnica;
+        this.preco = preco;
     }
 
-    public String getNomeFantasia() {
-        return nomeFantasia;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setNomeFantasia(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCategoria() {
+        return categoria;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
-    public String getRazaoSocial() {
-        return razaoSocial;
+    public String getFichaTecnica() {
+        return fichaTecnica;
     }
 
-    public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+    public void setFichaTecnica(String fichaTecnica) {
+        this.fichaTecnica = fichaTecnica;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getPreco() {
+        return preco;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setPreco(String preco) {
+        this.preco = preco;
     }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public String getConfirmarSenha() {
-        return confirmarSenha;
-    }
-
-    public void setConfirmarSenha(String confirmarSenha) {
-        this.confirmarSenha = confirmarSenha;
-    }
+ 
     
+
 }
