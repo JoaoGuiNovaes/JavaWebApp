@@ -1,16 +1,16 @@
 package com.example.javawebapp.produto;
 
 public class Produto {
-    private Integer lojaId;
+    private Integer id;
     private String nomeProduto;
     private double preco;
     private String categoria;
     private String descricao;
     private String imagem;
 
-    public Produto(Integer lojaId, String nomeProduto, double preco, String categoria, String descricao,
+    public Produto(Integer id, String nomeProduto, double preco, String categoria, String descricao,
             String imagem) {
-        this.lojaId = lojaId;
+        this.id = id;
         this.nomeProduto = nomeProduto;
         this.preco = preco;
         this.categoria = categoria;
@@ -18,11 +18,11 @@ public class Produto {
         this.imagem = imagem;
     }
     
-    public Integer getLojaId() {
-        return lojaId;
+    public Integer getId() {
+        return id;
     }
-    public void setLojaId(Integer lojaId) {
-        this.lojaId = lojaId;
+    public void setId(Integer id) {
+        this.id = id;
     }
     public String getNomeProduto() {
         return nomeProduto;

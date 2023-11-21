@@ -21,8 +21,7 @@
     <header>
       <a href="Home"><img src="Imagens/home.png" alt="home" id="home"></a>
         <img class="header-logo" src="Imagens/braG.png" alt="logo" id="logo">
-        <img src="Imagens/perfil.png" alt="user" id="user">
-    
+       <a href="Profile"><img src="Imagens/perfil.png" alt="user" id="user"></a> 
       </header>
       <div class="progress-bar">
         <div class="step">

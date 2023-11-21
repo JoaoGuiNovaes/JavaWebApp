@@ -44,109 +44,66 @@ public class ProdutoDAO {
         }
     }
 
-    // public static List<Usuario> listarTodos() {
-    //     String sql = "SELECT * FROM usuarios;";
-    //     List<Usuario> alunos = new ArrayList<>();
+    public static List<Produto> listarTodos() {
+        String sql = "SELECT * FROM produtos;";
+        List<Produto> produtos = new ArrayList<>();
 
-    //     try (
-    //         Connection connection = Conexao.getConnection();
-    //         Statement statement = connection.createStatement();
-    //         ResultSet rs = statement.executeQuery(sql);
-    //     ) {
-    //         while(rs.next()) {
-    //             alunos.add(
-    //                 new Usuario(
-    //                     rs.getInt("id"), 
-    //                     rs.getString("nome"), 
-    //                     rs.getString("email"), 
-    //                     rs.getString("senha"),
-    //                     rs.getString("dataNascimento")
-    //                 )
-    //             );
-    //         }
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //         return alunos;
-    //     } 
+        try (
+            Connection connection = Conexao.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
+        ) {
+            while(rs.next()) {
+                produtos.add(
+                    new Produto(
+                        rs.getInt("id"), 
+                        rs.getString("nomeProduto"), 
+                        rs.getDouble("preco"), 
+                        rs.getString("categoria"),
+                        rs.getString("descricao"),
+                        rs.getString("imagem")
+                    )
+                );
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return produtos;
+        } 
 
-    //     return alunos;
+        return produtos;
         
-    // }
+    }
 
-    // public static Usuario buscarPorId(Integer id) {
-    //     String sql = "SELECT * FROM usuarios WHERE id = ?;";
+    public static Produto buscarPorId(Integer id) {
+      String sql = "SELECT * FROM produtos WHERE id = ?;";
 
-    //     try (
-    //         Connection connection = Conexao.getConnection();
-    //         PreparedStatement statement = connection.prepareStatement(sql);
-    //     ) {
-    //         statement.setInt(1, id);
-    //         ResultSet rs = statement.executeQuery();
+        try (
+            Connection connection = Conexao.getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+        ) {
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
 
-    //         if (rs.next()) {
-    //             return new Usuario(
-    //                 rs.getInt("id"),
-    //                 rs.getString("nome"),
-    //                 rs.getString("email"),
-    //                 rs.getString("senha"),
-    //                 rs.getString("dataNascimento")
-    //             );
-    //         }
+            if (rs.next()) {
+                return new Produto(
+                    rs.getInt("lojaId"),
+                    rs.getString("nomeProduto"),
+                    rs.getDouble("preco"),
+                    rs.getString("categoria"),
+                    rs.getString("descricao"),
+                    rs.getString("imagem")
+                );
+            }
 
-    //         rs.close();
+            rs.close();
 
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //         return null;
-    //     }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
 
-    //     return null;
-    // }
-
-    // public static Usuario buscarPorEmail(String email) {
-    //     String sql = "SELECT * FROM usuarios WHERE email = ?;";
-
-    //     try (
-    //         Connection connection = Conexao.getConnection();
-    //         PreparedStatement statement = connection.prepareStatement(sql);
-    //     ) {
-    //         statement.setString(1, email);
-    //         ResultSet rs = statement.executeQuery();
-
-    //         if (rs.next()) {
-    //             return new Usuario(
-    //                 rs.getInt("id"),
-    //                 rs.getString("nome"),
-    //                 rs.getString("email"),
-    //                 rs.getString("senha"),
-    //                 rs.getString("dataNascimento")
-    //             );
-    //         }
-
-    //         rs.close();
-
-    //     } catch (Exception e) {
-    //         e.printStackTrace();
-    //         return null;
-    //     }
-
-    //     return null;
-    // }
-
-    // public static Boolean login(String email, String senha) {
-    //     Usuario usuario = buscarPorEmail(email);
-    //     if (usuario != null) {
-    //         BCrypt.Result result = BCrypt.verifyer().verify(senha.toCharArray(), usuario.getSenha());
-    //         return result.verified;
-    //     }
-    //     return false;
-    // }
-
-    // public static Boolean existeComEmail(String email) {
-    //     return buscarPorEmail(email) != null;
-    // }
-
-
+        return null;
+    }
 
     // public static Usuario atualizarUsuario(Integer id, String nome, String email, String dataNascimento) {
     //     Usuario usuario = null;
