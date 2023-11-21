@@ -58,9 +58,9 @@ public class ProdutoDAO {
                     new Produto(
                         rs.getInt("id"), 
                         rs.getString("nomeProduto"), 
-                        rs.getDouble("preco"), 
-                        rs.getString("categoria"),
-                        rs.getString("descricao"),
+                        rs.getString("categoria"), 
+                        rs.getString("fichaTecnica"),
+                        rs.getString("preco"),
                         rs.getString("imagem")
                     )
                 );
@@ -88,7 +88,7 @@ public class ProdutoDAO {
                 return new Produto(
                     rs.getInt("lojaId"),
                     rs.getString("nomeProduto"),
-                    rs.getDouble("preco"),
+                    rs.getString("preco"),
                     rs.getString("categoria"),
                     rs.getString("descricao"),
                     rs.getString("imagem")

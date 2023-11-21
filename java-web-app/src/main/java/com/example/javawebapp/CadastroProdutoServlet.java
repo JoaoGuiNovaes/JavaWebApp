@@ -1,16 +1,14 @@
 package com.example.javawebapp;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Set;
-import java.util.UUID;
 
-import com.example.javawebapp.forms.CadastroLojaForm;
+import java.io.IOException;
+
+import java.util.Set;
+
+
+
 import com.example.javawebapp.forms.CadastroProdutoForm;
-import com.example.javawebapp.loja.LojaDAO;
+
 import com.example.javawebapp.produto.ProdutoDAO;
 import com.example.javawebapp.validators.ValidatorUtil;
 
@@ -19,7 +17,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
+
 import jakarta.validation.ConstraintViolation;
 
 @WebServlet(name = "cadastroProdutoServlet", value = "/CadastroProduto")

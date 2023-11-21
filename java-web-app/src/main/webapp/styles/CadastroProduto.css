@@ -22,6 +22,10 @@ img.header{
     margin-left: 50px;
 }
 
+li{
+    color: red;
+}
+
 #logo{
     width: auto;
   height: 70px;

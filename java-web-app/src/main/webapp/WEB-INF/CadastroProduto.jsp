@@ -31,6 +31,16 @@
             <div class="col-md-11 control-label">
                     <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
             </div>
+            <c:if test="${violations != null}">
+              <h3>
+                  <fmt:message key="registration.message" />
+                  </h2>
+                  <ul>
+                      <c:forEach var="violation" items="${violations}">
+                          <li>${violation.propertyPath} ${violation.message}</li>
+                      </c:forEach>
+                  </ul>
+          </c:if>
             </div>
             
             <!-- Text input-->
@@ -68,7 +78,7 @@
                 <div class="col-md-8">
                     <div class="input-group">
                         <span class="input-group-addon">R$</span>
-                        <input id="preco" name="preco" placeholder="00,00" class="form-control input-md" required="" type="text" pattern="\d{1,3}(?:\.\d{3})*(?:,\d{2})?">
+                        <input id="preco" name="preco" placeholder="00,00" class="form-control input-md" required="" type="text">
                     </div>
                     <p class="help-block">Formato esperado: 00,00</p>
                 </div>
