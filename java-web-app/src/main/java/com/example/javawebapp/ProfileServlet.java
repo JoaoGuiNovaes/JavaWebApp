@@ -37,6 +37,7 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String nome = req.getParameter("nome");
+        String idEndereco = req.getParameter("id_endereco");
         String email = req.getParameter("email");
         String cep = req.getParameter("cep");
         String endereco = req.getParameter("endereco");
@@ -60,8 +61,8 @@ public class ProfileServlet extends HttpServlet {
             
                 UsuarioDao.atualizarUsuario( idUsuarioLogado, nome, email, dataNascimento);
                         System.out.println("AQUIIIIIIIIIIII UsuarioDao.atualizarUsuario( idUsuarioLogado, nome, email, dataNascimento): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
-
-                // EnderecoDao.atualizarEndereco(null, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
+                        // String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia, Integer id
+                EnderecoDao.atualizarEndereco(Integer.parseInt(idEndereco), cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia, idUsuarioLogado);
                 // System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
 
                 res.sendRedirect("Profile");

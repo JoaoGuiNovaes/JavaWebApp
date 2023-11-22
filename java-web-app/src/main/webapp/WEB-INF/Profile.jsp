@@ -26,8 +26,11 @@
                     <div class="card mb-6 ">
                         <div class="card-header">Meu Perfil</div>
                         <div class="card-body">
-                            <form action="Login" method="post">
+                            <form action="Profile" method="post">
                                 <!-- Form Group (username)-->
+
+                                <input type="hidden" id="id_endereco" name="id_endereco"  value="${endereco.id}" >
+
                                 <div class="mb-3">
                                     <label class="small mb-1" for="nome">Nome </label>
                                     <input class="form-control" id="nome" name="nome" type="text" placeholder="Digite seu nome" value="${usuario.nome}">

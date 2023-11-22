@@ -75,9 +75,9 @@ public class EnderecoDao {
 
         return null;
     }
-    public static Endereco atualizarEndereco(Integer id, String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia) {
+    public static Endereco atualizarEndereco(Integer id_endereco, String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia, Integer id_usuario) {
         Endereco endereco2 = null;
-        String sql = "UPDATE enderecos SET cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, estado = ?, cidade = ?, ponto_de_referencia = ?  WHERE id = ?;";
+        String sql = "UPDATE enderecos SET cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, estado = ?, cidade = ?, ponto_de_referencia = ?  WHERE id_usuario = ?;";
         
         try (
             Connection connection = Conexao.getConnection();
@@ -91,13 +91,15 @@ public class EnderecoDao {
             statement.setString(6, estado);
             statement.setString(7, cidade);
             statement.setString(8, pontoReferencia);
-            statement.setInt(9, id);
+            statement.setInt(9, id_usuario);
             int linhasAfetadas = statement.executeUpdate();
     
             if (linhasAfetadas > 0) {
-                endereco2 = new Endereco(id, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
+                endereco2 = new Endereco(id_endereco, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
             }
     
+            System.out.println(endereco2);
+
             return endereco2;  
         } catch (SQLException e) {
             e.printStackTrace();

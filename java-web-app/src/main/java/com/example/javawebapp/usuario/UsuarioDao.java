@@ -150,16 +150,15 @@ public class UsuarioDao {
 
     public static Usuario atualizarUsuario(Integer id, String nome, String email, String dataNascimento) {
         Usuario usuario = null;
-        String sql = "UPDATE usuarios SET nome = ?, email = ?, dataNascimento = ? WHERE id = ?;";
+        String sql = "UPDATE usuarios SET nome = ?, dataNascimento = ? WHERE id = ?;";
         
         try (
             Connection connection = Conexao.getConnection();
             PreparedStatement statement = connection.prepareStatement(sql);
         ) {
             statement.setString(1, nome);
-            statement.setString(2, email);
-            statement.setString(3, dataNascimento);
-            statement.setInt(1, id);
+            statement.setString(2, dataNascimento);
+            statement.setInt(3, id);
 
             int linhasAfetadas = statement.executeUpdate();
     
