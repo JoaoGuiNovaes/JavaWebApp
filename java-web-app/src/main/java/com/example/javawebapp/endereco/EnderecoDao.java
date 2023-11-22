@@ -9,7 +9,7 @@ import com.example.javawebapp.db.Conexao;
 public class EnderecoDao {
     public static Endereco cadastrarEndereco(String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia) {
         Endereco endereco2 = null;
-        String sql = "INSERT INTO enderecos (cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO enderecos (cep, endereco, numero, complemento, bairro, estado, cidade, ponto_de_referencia) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
         
         try (
             Connection connection = Conexao.getConnection();
@@ -42,7 +42,7 @@ public class EnderecoDao {
     }
 
     public static Endereco buscarPorIdUsuarioEndereco(Integer id) {
-        String sql = "SELECT * FROM enderecos WHERE id = ?;";
+        String sql = "SELECT * FROM enderecos WHERE id_usuario = ?;";
 
         try (
             Connection connection = Conexao.getConnection();
@@ -61,7 +61,8 @@ public class EnderecoDao {
                     rs.getString("bairro"),
                     rs.getString("estado"),
                     rs.getString("cidade"),
-                    rs.getString("pontoReferencia")
+                    rs.getString("ponto_de_referencia"),
+                    rs.getInt("id_usuario")
                 );
             }
 

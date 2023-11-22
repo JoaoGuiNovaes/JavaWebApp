@@ -28,9 +28,12 @@ public class ProfileServlet extends HttpServlet {
       
     
         String emailUsuario = (String) session.getAttribute("emailUsuario");
+        System.out.println("AQUIIIIIIIIIIII emailUsuario: "+ emailUsuario);
         Integer idUsuarioLogado = UsuarioDao.buscarPorEmail(emailUsuario).getId();
+        System.out.println("AQUIIIIIIIIIIII idUsuarioLogado: "+ idUsuarioLogado);
         Usuario usuario = UsuarioDao.buscarPorEmail(emailUsuario);
         Endereco endereco = EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado);
+        System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
         req.setAttribute("usuario", usuario);
         req.setAttribute("endereco", endereco);
         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
