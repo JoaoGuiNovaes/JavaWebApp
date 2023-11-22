@@ -26,6 +26,11 @@ public class Usuario {
 
 
 
+    public Usuario(String nome2, String email2, String dataNascimento2) {
+    }
+
+
+
     public Integer getId() {
         return id;
     }

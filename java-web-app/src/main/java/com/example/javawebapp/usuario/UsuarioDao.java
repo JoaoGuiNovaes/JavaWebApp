@@ -159,11 +159,12 @@ public class UsuarioDao {
             statement.setString(1, nome);
             statement.setString(2, email);
             statement.setString(3, dataNascimento);
-            statement.setInt(4, id);
+            statement.setInt(1, id);
+
             int linhasAfetadas = statement.executeUpdate();
     
             if (linhasAfetadas > 0) {
-                usuario = new Usuario(id, nome, email, dataNascimento);
+                usuario = new Usuario(nome, email, dataNascimento);
             }
     
             return usuario;  

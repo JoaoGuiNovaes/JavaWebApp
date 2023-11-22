@@ -77,7 +77,7 @@ public class EnderecoDao {
     }
     public static Endereco atualizarEndereco(Integer id, String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia) {
         Endereco endereco2 = null;
-        String sql = "UPDATE enderecos SET cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, estado = ?, cidade = ?, pontoReferencia = ?  WHERE id = ?;";
+        String sql = "UPDATE enderecos SET cep = ?, endereco = ?, numero = ?, complemento = ?, bairro = ?, estado = ?, cidade = ?, ponto_de_referencia = ?  WHERE id = ?;";
         
         try (
             Connection connection = Conexao.getConnection();

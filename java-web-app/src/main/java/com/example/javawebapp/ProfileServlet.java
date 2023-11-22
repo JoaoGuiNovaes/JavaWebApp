@@ -25,15 +25,10 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         HttpSession session = req.getSession();
-      
-    
         String emailUsuario = (String) session.getAttribute("emailUsuario");
-        System.out.println("AQUIIIIIIIIIIII emailUsuario: "+ emailUsuario);
         Integer idUsuarioLogado = UsuarioDao.buscarPorEmail(emailUsuario).getId();
-        System.out.println("AQUIIIIIIIIIIII idUsuarioLogado: "+ idUsuarioLogado);
         Usuario usuario = UsuarioDao.buscarPorEmail(emailUsuario);
         Endereco endereco = EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado);
-        System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
         req.setAttribute("usuario", usuario);
         req.setAttribute("endereco", endereco);
         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
@@ -52,26 +47,30 @@ public class ProfileServlet extends HttpServlet {
         String cidade = req.getParameter("cidade");
         String pontoReferencia = req.getParameter("pontoReferencia");
         String dataNascimento = req.getParameter("datanascimento");
+        HttpSession session = req.getSession();
+        String emailUsuario = (String) session.getAttribute("emailUsuario");
+        Integer idUsuarioLogado = UsuarioDao.buscarPorEmail(emailUsuario).getId();
+        System.out.println("AQUIIIIIIIIIIII idUsuarioLogado: "+ idUsuarioLogado);
 
            ProfileForm profileForm = new ProfileForm(nome, email, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia, dataNascimento);
         
         Set<ConstraintViolation<ProfileForm>> violations = ValidatorUtil.validateObject(profileForm);
         
-    //     if (violations.isEmpty()) {
-    //         if (UsuarioDao.existeComEmail(email)) {
-    //             // mandar erro na tela
-    //             req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
-    //             req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
-    //         } else {
-    //             UsuarioDao.atualizarUsuario(null, nome, email, dataNascimento);
-    //             UsuarioDao.atualizarEndereco(null, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
-    //             res.sendRedirect("Profile");
-    //         }
-    //     } else {
-    //         req.setAttribute("cadastroForm", profileForm);
-    //         req.setAttribute("violations", violations);
-    //         req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
-    //     }
+        if (violations.isEmpty()) {
+            
+                UsuarioDao.atualizarUsuario( idUsuarioLogado, nome, email, dataNascimento);
+                        System.out.println("AQUIIIIIIIIIIII UsuarioDao.atualizarUsuario( idUsuarioLogado, nome, email, dataNascimento): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
 
-    // }
-}}
+                // EnderecoDao.atualizarEndereco(null, cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia);
+                // System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
+
+                res.sendRedirect("Profile");
+            
+        } else {
+            req.setAttribute("profileForm", profileForm);
+            req.setAttribute("violations", violations);
+            req.getRequestDispatcher("WEB-INF/Profile.jsp").forward(req, res);
+        }
+
+    }
+}
