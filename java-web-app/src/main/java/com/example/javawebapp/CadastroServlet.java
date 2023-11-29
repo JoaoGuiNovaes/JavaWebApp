@@ -1,6 +1,10 @@
 package com.example.javawebapp;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Set;
 
 import com.example.javawebapp.forms.CadastroForm;
@@ -28,8 +32,7 @@ public class CadastroServlet extends HttpServlet {
         String senha = req.getParameter("senha");
         String confirmarSenha = req.getParameter("confirmarsenha");
         String dataNascimento = req.getParameter("datanascimento");
-
-           CadastroForm cadastroForm = new CadastroForm(nome, email, senha, dataNascimento, confirmarSenha);
+        CadastroForm cadastroForm = new CadastroForm(nome, email, senha, dataNascimento, confirmarSenha);
         
         Set<ConstraintViolation<CadastroForm>> violations = ValidatorUtil.validateObject(cadastroForm);
         

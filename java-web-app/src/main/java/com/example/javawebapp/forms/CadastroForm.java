@@ -8,55 +8,56 @@ import jakarta.validation.constraints.Size;
 public class CadastroForm {
     @NotNull
     @NotBlank
-    private String nome;
+    private String Nome;
     @NotNull
     @NotBlank
     @Email
-    private String email;
+    private String Email;
     @NotNull
     @NotBlank
     @Size(min = 4, max = 30)
-    private String senha;
-    @NotBlank
-    @NotNull
+    private String Senha;
+    @NotBlank(message = "Insira uma data!")
+    @NotNull(message = "Insira uma data!")
+    @DataNascimentoValida(message = "Não é possível registrar datas posteriores à data atual, e só maiores de 12 anos podem se cadastrar!")
     private String dataNascimento;
-    @NotBlank
-    @NotNull
-    @Size(min = 4, max = 30)
+    @NotBlank(message = "Preencha o campo confirmar senha!")
+    @NotNull(message = "Preencha o campo confirmar senha!")
     private String confirmarSenha;
 
-    public CadastroForm(@NotNull @NotBlank String nome, @NotNull @NotBlank @Email String email,
-            @NotNull @NotBlank @Size(min = 4, max = 30) String senha, @NotBlank @NotNull String dataNascimento,
-            String confirmarSenha) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
+    public CadastroForm(@NotNull @NotBlank String nome,
+            @NotNull @NotBlank @jakarta.validation.constraints.Email String email,
+            @NotNull @NotBlank @Size(min = 4, max = 30) String senha, @NotBlank @NotNull @DataNascimentoValida String dataNascimento,
+            @NotBlank @NotNull String confirmarSenha) {
+        Nome = nome;
+        Email = email;
+        Senha = senha;
         this.dataNascimento = dataNascimento;
         this.confirmarSenha = confirmarSenha;
     }
 
     public String getNome() {
-        return nome;
+        return Nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        Nome = nome;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public String getSenha() {
-        return senha;
+        return Senha;
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        Senha = senha;
     }
 
     public String getDataNascimento() {
@@ -75,4 +76,5 @@ public class CadastroForm {
         this.confirmarSenha = confirmarSenha;
     }
 
+    
 }

@@ -42,36 +42,51 @@
                             </c:forEach>
                         </ul>
                 </c:if>
-                <form action="Cadastro" method="post" id="form1">
+                <form class="needs-validation" action="Cadastro" method="post" novalidate id="form1" >
                     <label for="nome" class="form-label"><fmt:message key="registration.name" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
                         <input type="text" id="nome" name="nome" class="form-control"
                             placeholder="Digite seu nome" value="${nome}">
+                            <div class="invalid-feedback">
+                                Preencha este campo!
+                              </div>
                     </div>
                     <label for="email" class="form-label"><fmt:message key="registration.email" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/email.svg" alt="">
                         <input type="email" id="email" name="email" class="form-control"
                             placeholder="Digite seu E-mail" value="${email}">
+                            <div class="invalid-feedback">
+                                Insira um formato de e-mail válido!
+                              </div>
                     </div>
                     <label for="senha" class="form-label"><fmt:message key="registration.password" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="senha" name="senha" class="form-control"
                             placeholder="Digite sua senha" value="${senha}">
+                            <div class="invalid-feedback">
+                                Senha deve ter entre 4 e 30 caracteres, pelo menos um caractere maiúsculo, um minúsculo, e um número!
+                              </div>
                     </div>
-                    <label for="confirmar_senha" class="form-label"><fmt:message key="registration.c_password" /></label>
+                    <label for="confirmarSenha" class="form-label"><fmt:message key="registration.c_password" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
-                        <input type="password" id="confirmar_senha" name="confirmarsenha"
+                        <input type="password" id="confirmarSenha" name="confirmarsenha"
                             class="form-control" placeholder="Confirme sua senha" value="${confirmarsenha}">
+                            <div class="invalid-feedback">
+                                As duas senhas não coincidem: devem ser iguais!
+                              </div>
                     </div>
                     <label for="data_nascimento" class="form-label"><fmt:message key="registration.dateBirth" /></label>
                     <div class="input-group">
                         <img class="icon" src="Imagens/calendar.svg" alt="">
                         <input type="date" id="data_nascimento" name="datanascimento" class="form-control"
                             value="${datanascimento}">
+                            <div class="invalid-feedback">
+                                Looks good!
+                              </div>
                     </div>
                     <div class="divbutton">
                         
@@ -90,6 +105,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-<script src="scripts.js"></script>
+    <script src="scripts/scriptCadastro.js"></script>
 </body>
 </html>
