@@ -1,5 +1,7 @@
 package com.example.javawebapp.forms;
 
+import java.time.LocalDate;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -9,25 +11,29 @@ public class CadastroForm {
     @NotNull
     @NotBlank
     private String Nome;
+
     @NotNull
     @NotBlank
     @Email
     private String Email;
+
     @NotNull
     @NotBlank
     @Size(min = 4, max = 30)
     private String Senha;
-    @NotBlank(message = "Insira uma data!")
+
     @NotNull(message = "Insira uma data!")
-    @DataNascimentoValida(message = "Não é possível registrar datas posteriores à data atual, e só maiores de 12 anos podem se cadastrar!")
-    private String dataNascimento;
+    @DataNascimentoValida
+    private LocalDate dataNascimento; // Alterado para LocalDate
+
     @NotBlank(message = "Preencha o campo confirmar senha!")
     @NotNull(message = "Preencha o campo confirmar senha!")
     private String confirmarSenha;
 
     public CadastroForm(@NotNull @NotBlank String nome,
-            @NotNull @NotBlank @jakarta.validation.constraints.Email String email,
-            @NotNull @NotBlank @Size(min = 4, max = 30) String senha, @NotBlank @NotNull @DataNascimentoValida String dataNascimento,
+            @NotNull @NotBlank @Email String email,
+            @NotNull @NotBlank @Size(min = 4, max = 30) String senha,
+            @NotNull @DataNascimentoValida LocalDate dataNascimento, // Alterado para LocalDate
             @NotBlank @NotNull String confirmarSenha) {
         Nome = nome;
         Email = email;
@@ -60,20 +66,20 @@ public class CadastroForm {
         Senha = senha;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public String getConfirmarSenha() {
         return confirmarSenha;
     }
 
     public void setConfirmarSenha(String confirmarSenha) {
         this.confirmarSenha = confirmarSenha;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     

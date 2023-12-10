@@ -46,7 +46,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -69,12 +68,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
-                  <configuration>
-                <compilerArgs>
-                    <arg>-XaddReads</arg>
-                    <arg>org.hibernate.validator=ALL-UNNAMED</arg>
-                </compilerArgs>
-            </configuration>
             </plugin>
         </plugins>
     </build>

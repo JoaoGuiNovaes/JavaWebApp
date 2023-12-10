@@ -9,15 +9,12 @@ import java.lang.annotation.Target;
 
 import com.example.javawebapp.validators.DataNascimentoValidator;
 
-
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = DataNascimentoValidator.class)
 public @interface DataNascimentoValida {
-
-    String message() default "A data de nascimento não está dentro do intervalo permitido.";
-
+    String message() default "Não é possível cadastrar uma data posterior à atual.";
     Class<?>[] groups() default {};
-
     Class<? extends Payload>[] payload() default {};
 }
+

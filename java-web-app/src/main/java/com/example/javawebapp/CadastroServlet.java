@@ -1,10 +1,7 @@
 package com.example.javawebapp;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 import com.example.javawebapp.forms.CadastroForm;
@@ -32,13 +29,14 @@ public class CadastroServlet extends HttpServlet {
         String senha = req.getParameter("senha");
         String confirmarSenha = req.getParameter("confirmarsenha");
         String dataNascimento = req.getParameter("datanascimento");
-        CadastroForm cadastroForm = new CadastroForm(nome, email, senha, dataNascimento, confirmarSenha);
+        LocalDate dateDataNascimento = LocalDate.parse(dataNascimento);
+        System.out.println("dateDataNascimento: "  + dateDataNascimento);
+        CadastroForm cadastroForm = new CadastroForm(nome, email, senha, dateDataNascimento, confirmarSenha);
         
         Set<ConstraintViolation<CadastroForm>> violations = ValidatorUtil.validateObject(cadastroForm);
         
         if (violations.isEmpty()) {
             if (UsuarioDao.existeComEmail(email)) {
-                // mandar erro na tela
                 req.setAttribute("existeErro", "Já existe um usuário com esse e-mail");
                 req.getRequestDispatcher("WEB-INF/Cadastro.jsp").forward(req, res);
             } else {

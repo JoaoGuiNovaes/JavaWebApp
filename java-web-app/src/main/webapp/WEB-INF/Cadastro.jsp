@@ -38,7 +38,7 @@
                         </h2>
                         <ul>
                             <c:forEach var="violation" items="${violations}">
-                                <li>${violation.propertyPath} ${violation.message}</li>
+                                <li>${violation.message}</li>
                             </c:forEach>
                         </ul>
                 </c:if>
@@ -47,7 +47,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/nome.svg" alt="">
                         <input type="text" id="nome" name="nome" class="form-control"
-                            placeholder="Digite seu nome" value="${nome}">
+                            placeholder="Digite seu nome" value="${cadastroForm.nome}">
                             <div class="invalid-feedback">
                                 Preencha este campo!
                               </div>
@@ -56,7 +56,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/email.svg" alt="">
                         <input type="email" id="email" name="email" class="form-control"
-                            placeholder="Digite seu E-mail" value="${email}">
+                            placeholder="Digite seu E-mail" value="${cadastroForm.email}">
                             <div class="invalid-feedback">
                                 Insira um formato de e-mail válido!
                               </div>
@@ -65,7 +65,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="senha" name="senha" class="form-control"
-                            placeholder="Digite sua senha" value="${senha}">
+                            placeholder="Digite sua senha" value="${cadastroForm.senha}">
                             <div class="invalid-feedback">
                                 Senha deve ter entre 4 e 30 caracteres, pelo menos um caractere maiúsculo, um minúsculo, e um número!
                               </div>
@@ -74,7 +74,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/lock.svg" alt="">
                         <input type="password" id="confirmarSenha" name="confirmarsenha"
-                            class="form-control" placeholder="Confirme sua senha" value="${confirmarsenha}">
+                            class="form-control" placeholder="Confirme sua senha" value="${cadastroForm.confirmarSenha}">
                             <div class="invalid-feedback">
                                 As duas senhas não coincidem: devem ser iguais!
                               </div>
@@ -83,7 +83,7 @@
                     <div class="input-group">
                         <img class="icon" src="Imagens/calendar.svg" alt="">
                         <input type="date" id="data_nascimento" name="datanascimento" class="form-control"
-                            value="${datanascimento}">
+                            value="${cadastroForm.dataNascimento}">
                             <div class="invalid-feedback">
                                 Looks good!
                               </div>

@@ -35,13 +35,14 @@
                     </h1>
                     <img class="iconlogin" src="Imagens/login.png" alt="Imagem de login">
                     </div>
+                    <p>${errorLogin}</p>
                 <c:if test="${violations != null}">
                     <h3>
                         <fmt:message key="login.message" />
                         </h2>
                         <ul>
                             <c:forEach var="violation" items="${violations}">
-                                <li>${violation.propertyPath} ${violation.message}</li>
+                                <li>${violation.message}</li>
                             </c:forEach>
                         </ul>
                 </c:if>
