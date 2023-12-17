@@ -26,7 +26,7 @@ public class LojaDAO {
             statement.setString(2, email);
             statement.setString(3, razaoSocial);
             statement.setString(4, cnpj);
-            statement.setString(5, senha);
+            statement.setString(5, hashSenha);
             statement.executeUpdate();
 
             ResultSet rs = statement.getGeneratedKeys();

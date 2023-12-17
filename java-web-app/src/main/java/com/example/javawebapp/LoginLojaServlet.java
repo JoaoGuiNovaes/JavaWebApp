@@ -3,10 +3,8 @@ package com.example.javawebapp;
 import java.io.IOException;
 import java.util.Set;
 
-import com.example.javawebapp.forms.LoginForm;
 import com.example.javawebapp.forms.LoginLojaForm;
 import com.example.javawebapp.loja.LojaDAO;
-import com.example.javawebapp.usuario.UsuarioDao;
 import com.example.javawebapp.validators.ValidatorUtil;
 
 import jakarta.servlet.ServletException;
@@ -38,7 +36,7 @@ public class LoginLojaServlet extends HttpServlet {
             if (violations.isEmpty()) {
                 if (LojaDAO.login(email, senha)) {
                     HttpSession session = req.getSession();
-                    session.setAttribute("emailUsuario", email);
+                    session.setAttribute("emailLoja", email);
                     res.sendRedirect("HomeLoja");
                 } else {
                     req.setAttribute("errorLogin", "E-mail ou senha incorretos");
@@ -48,7 +46,7 @@ public class LoginLojaServlet extends HttpServlet {
                 req.setAttribute("email", email);
                 req.setAttribute("senha", senha);
                 req.setAttribute("violations", violations);
-                req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
+                req.getRequestDispatcher("WEB-INF/LoginLoja.jsp").forward(req, res);
             }
 }
 }

@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(value = {"/Profile","/FinalizarCompra, /CadastroEndereco"})
-public class AuthenticationFilter implements Filter {
+@WebFilter(value = {"/HomeLoja","/ProfileStore, /CadastroProduto"})
+public class StoreAuthenticationFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -21,10 +21,10 @@ public class AuthenticationFilter implements Filter {
         HttpServletResponse res = (HttpServletResponse) response;
 
         HttpSession session = req.getSession();
-        String emailUsuario = (String) session.getAttribute("emailUsuario");
+        String emailLoja = (String) session.getAttribute("emailLoja");
 
-        if (emailUsuario == null) {
-            res.sendRedirect("Login");
+        if (emailLoja == null) {
+            res.sendRedirect("LoginLoja");
             return;
         }
 

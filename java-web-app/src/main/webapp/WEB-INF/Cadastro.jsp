@@ -42,6 +42,9 @@
                             </c:forEach>
                         </ul>
                 </c:if>
+                <c:if test="${existeErro != null}">
+                    <h4>${existeErro}</h4>
+                </c:if>
                 <form class="needs-validation" action="Cadastro" method="post" novalidate id="form1" >
                     <label for="nome" class="form-label"><fmt:message key="registration.name" /></label>
                     <div class="input-group">

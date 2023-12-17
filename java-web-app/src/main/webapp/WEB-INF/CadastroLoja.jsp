@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
@@ -15,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pangolin&display=swap"
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/cadastroLoja.css">
+        <link rel="stylesheet" href="styles/cadastro.css">
 
     <title>
         <fmt:message key="storeRegistration.title" />

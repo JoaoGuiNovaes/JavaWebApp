@@ -30,7 +30,6 @@ public class CadastroServlet extends HttpServlet {
         String confirmarSenha = req.getParameter("confirmarsenha");
         String dataNascimento = req.getParameter("datanascimento");
         LocalDate dateDataNascimento = LocalDate.parse(dataNascimento);
-        System.out.println("dateDataNascimento: "  + dateDataNascimento);
         CadastroForm cadastroForm = new CadastroForm(nome, email, senha, dateDataNascimento, confirmarSenha);
         
         Set<ConstraintViolation<CadastroForm>> violations = ValidatorUtil.validateObject(cadastroForm);
