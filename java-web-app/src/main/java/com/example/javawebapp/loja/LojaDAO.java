@@ -11,7 +11,6 @@ import com.example.javawebapp.db.Conexao;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
-// DAO = Data Access Object
 public class LojaDAO {
     public static Loja cadastrar(String nomeFantasia, String email, String razaoSocial, String cnpj, String senha) {
         Loja loja = null;

@@ -12,7 +12,7 @@
     </title>
     <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles/FinalizarCompra.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/finalizarCompra.css'>
 </head>
 
 <body>

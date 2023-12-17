@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Set;
 
 import com.example.javawebapp.forms.LoginForm;
+import com.example.javawebapp.forms.LoginLojaForm;
+import com.example.javawebapp.loja.LojaDAO;
 import com.example.javawebapp.usuario.UsuarioDao;
 import com.example.javawebapp.validators.ValidatorUtil;
 
@@ -15,12 +17,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.ConstraintViolation;
 
-@WebServlet(name = "loginServlet", value = "/Login")
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "loginLojaServlet", value = "/LoginLoja")
+public class LoginLojaServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
+        req.getRequestDispatcher("WEB-INF/LoginLoja.jsp").forward(req, res);
     }
 
     @Override
@@ -28,19 +30,19 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String senha = req.getParameter("senha");
 
-        LoginForm loginForm = new LoginForm(email, senha);
+        LoginLojaForm loginLojaForm = new LoginLojaForm(email, senha);
 
-        Set<ConstraintViolation<LoginForm>> violations = 
-            ValidatorUtil.validateObject(loginForm);
+        Set<ConstraintViolation<LoginLojaForm>> violations = 
+            ValidatorUtil.validateObject(loginLojaForm);
 
             if (violations.isEmpty()) {
-                if (UsuarioDao.login(email, senha)) {
+                if (LojaDAO.login(email, senha)) {
                     HttpSession session = req.getSession();
                     session.setAttribute("emailUsuario", email);
-                    res.sendRedirect("Home");
+                    res.sendRedirect("HomeLoja");
                 } else {
                     req.setAttribute("errorLogin", "E-mail ou senha incorretos");
-                    req.getRequestDispatcher("WEB-INF/Login.jsp").forward(req, res);
+                    req.getRequestDispatcher("WEB-INF/LoginLoja.jsp").forward(req, res);
                 }
             } else {
                 req.setAttribute("email", email);

@@ -11,7 +11,7 @@
       <fmt:message key="cart.title" />
     </title>
     <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
-    <link rel="stylesheet"  href="styles/Carrinho.css" />
+    <link rel="stylesheet"  href="styles/carrinho.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"

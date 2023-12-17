@@ -15,7 +15,7 @@
                             <fmt:message key="home.title" />
                         </title>
                         <meta name='viewport' content='width=device-width, initial-scale=1'>
-                        <link rel='stylesheet' type='text/css' media='screen' href='styles/Home.css'>
+                        <link rel='stylesheet' type='text/css' media='screen' href='styles/home.css'>
                         <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
 
                     </head>
