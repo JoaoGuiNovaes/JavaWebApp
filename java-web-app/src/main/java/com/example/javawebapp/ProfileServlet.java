@@ -63,7 +63,7 @@ public class ProfileServlet extends HttpServlet {
                         System.out.println("AQUIIIIIIIIIIII UsuarioDao.atualizarUsuario( idUsuarioLogado, nome, email, dataNascimento): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
                         // String cep, String endereco, String numero, String complemento, String bairro, String estado, String cidade, String pontoReferencia, Integer id
                 EnderecoDao.atualizarEndereco(Integer.parseInt(idEndereco), cep, endereco, numero, complemento, bairro, estado, cidade, pontoReferencia, idUsuarioLogado);
-                // System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
+                System.out.println("AQUIIIIIIIIIIII EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado): "+ EnderecoDao.buscarPorIdUsuarioEndereco(idUsuarioLogado));
 
                 res.sendRedirect("Profile");
             

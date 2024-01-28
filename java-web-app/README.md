@@ -24,31 +24,12 @@ https://tomcat.apache.org/download-10.cgi
 
 10. Acessar localhost:8080 e em seguida o link server status e manager app
 
-## Clonar repositório de template
-
-10. Fazer o git clone do projeto https://github.com/domingoslatorre/java-web-app
-
-```bash
-git clone https://github.com/domingoslatorre/java-web-app
-```
-
-11. Entrar no diretório do projeto e apagar a pasta .git
-```bash
-cd java-web-app
-rm -rf .git
-```
-12. Abrir o projeto no VSCode
-```bash
-code .
-```
-
 ## Implantando a aplicação manualmente
 
-13. Executar os comandos
+11. Executar os comandos
 ```bash 
 export JAVA_TOOL_OPTIONS="-Djava.net.useSystemProxies=true" 
 ```
-Obs: a configuração do proxy é necessária apenas nos laboratórios de informática.
 
 ```bash
 ./mvnw package
@@ -56,9 +37,9 @@ ou
 ./mvnw.cmd package
 ```
 
-14. Mover o arquivo .war localizado na pasta target para a pasta /apache-tomcat-10.1.12/webapps do tomcat. 
+12. Mover o arquivo .war localizado na pasta target para a pasta /apache-tomcat-10.1.12/webapps do tomcat. 
 
-15. Reiniciar o tomcat 
+13. Reiniciar o tomcat 
 ```bash
 ./bin/shutdown.sh
 ou
@@ -70,36 +51,34 @@ ou
 startup.bat
 ```
 
-16. Refazer os passos 13, 14 e 15 a cada alteração no código
+14. Refazer os passos 13, 14 e 15 a cada alteração no código
 
 ## Implantando a aplicação com uma extensão do VSCode
 
-14. Instalar as extensões Extension Pack for Java e Community Server Connectors
+15. Instalar as extensões Extension Pack for Java e Community Server Connectors
 
-15. Configurar o Apache Tomcat com Server na Community Server Connectors
+16. Configurar o Apache Tomcat com Server na Community Server Connectors
 Create new server -> Download server -> No, use server on disk, selecionar o diretório /apache-tomcat-10.1.12
 
-16. No icone do Tomcat configurado parar o server com Stop Server e em seguida iniciar com Start Server
+17. No icone do Tomcat configurado parar o server com Stop Server e em seguida iniciar com Start Server
 
-17. Executar os comandos
+18. Executar os comandos
 ```bash 
 export JAVA_TOOL_OPTIONS="-Djava.net.useSystemProxies=true" 
 ```
-Obs: a configuração do proxy é necessária apenas nos laboratórios de informática.
-
 ```bash
 ./mvnw package
 ou
 ./mvnw.cmd package
 ```
 
-18. No tomcat configurado adicionar uma implantação via Add Deployment, Exploded, selecionar o diretório gerado pelo maven no projeto projeto/target/java-web-app-1.0
+19. No tomcat configurado adicionar uma implantação via Add Deployment, Exploded, selecionar o diretório gerado pelo maven no projeto projeto/target/java-web-app-1.0
 
-19. Refazer o passo 17 e a opção Publish Server (Full) cada alteração.
+20. Refazer o passo 17 e a opção Publish Server (Full) cada alteração.
 
-20. No arquivo conf/context.xml do servidor adicionar o seguinte configuração `<Context reloadable="true">`
+21. No arquivo conf/context.xml do servidor adicionar o seguinte configuração `<Context reloadable="true">`
 
-21. Refazer apenas o passo 17 a cada alteração que a extensão irá implantar automaticamente a aplicação no Tomcat.
+22. Refazer apenas o passo 17 a cada alteração que a extensão irá implantar automaticamente a aplicação no Tomcat.
 
 ```bash
 ./mvnw package

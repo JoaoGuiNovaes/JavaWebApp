@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(value = {"/Profile","/FinalizarCompra, /CadastroEndereco"})
+@WebFilter(value = {"/Profile","/FinalizarCompra", "/CadastroEndereco"})
 public class AuthenticationFilter implements Filter {
 
     @Override

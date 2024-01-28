@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(value = {"/HomeLoja","/ProfileStore, /CadastroProduto"})
+@WebFilter(value = {"/CadastroProduto","/ProfileStore", "/CadastroProduto"})
 public class StoreAuthenticationFilter implements Filter {
 
     @Override
@@ -22,7 +22,7 @@ public class StoreAuthenticationFilter implements Filter {
 
         HttpSession session = req.getSession();
         String emailLoja = (String) session.getAttribute("emailLoja");
-
+        System.out.println(emailLoja);
         if (emailLoja == null) {
             res.sendRedirect("LoginLoja");
             return;

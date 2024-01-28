@@ -37,7 +37,7 @@ public class LoginLojaServlet extends HttpServlet {
                 if (LojaDAO.login(email, senha)) {
                     HttpSession session = req.getSession();
                     session.setAttribute("emailLoja", email);
-                    res.sendRedirect("HomeLoja");
+                    res.sendRedirect("CadastroProduto");
                 } else {
                     req.setAttribute("errorLogin", "E-mail ou senha incorretos");
                     req.getRequestDispatcher("WEB-INF/LoginLoja.jsp").forward(req, res);

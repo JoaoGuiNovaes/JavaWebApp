@@ -7,21 +7,18 @@
 
                     <!DOCTYPE html>
                     <html lang="pt-br">
-
                     <head>
                         <meta charset='utf-8'>
                         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+                        <link rel="stylesheet" href="styles/home.css">
                         <title>
                             <fmt:message key="home.title" />
                         </title>
                         <meta name='viewport' content='width=device-width, initial-scale=1'>
-                        <link rel='stylesheet' type='text/css' media='screen' href='styles/home.css'>
                         <link rel="icon" href="Imagens/icon.png" type="image/x-icon">
-
+                        <link rel="stylesheet" href="styles/home.css">
                     </head>
-
                     <body>
-
                         <header>
                             <img class="header-logo" src="Imagens/braG.png" alt="Logo">
                             <div class="dropdown">
@@ -73,14 +70,16 @@
                                             <div class="grid-description">
                                                 <c:out value='${produto.nomeProduto}' />
                                             </div>
-                                            <div class="grid-value"><strong><c:out value='${produto.preco}' /></strong></div>
+                                            <div class="grid-value"><strong>
+                                                    <c:out value='${produto.preco}' />
+                                                </strong></div>
                                             <button class="grid-button" type="submit">
                                                 <fmt:message key="home.buttonPurchase" />
                                             </button>
                                         </div>
                                     </c:forEach>
                                     <hr>
-                                    
+
                                 </div>
                             </div>
                         </main>

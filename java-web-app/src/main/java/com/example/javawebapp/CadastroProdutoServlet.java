@@ -1,14 +1,10 @@
 package com.example.javawebapp;
 
-
 import java.io.IOException;
-
 import java.util.Set;
-
-
-
 import com.example.javawebapp.forms.CadastroProdutoForm;
-
+import com.example.javawebapp.loja.Loja;
+import com.example.javawebapp.loja.LojaDAO;
 import com.example.javawebapp.produto.ProdutoDAO;
 import com.example.javawebapp.validators.ValidatorUtil;
 
@@ -17,7 +13,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.ConstraintViolation;
 
 @WebServlet(name = "cadastroProdutoServlet", value = "/CadastroProduto")
@@ -34,8 +30,6 @@ public class CadastroProdutoServlet extends HttpServlet {
         String fichaTecnica = req.getParameter("fichaTecnica");
         String preco = req.getParameter("preco");
         String imagem = req.getParameter("imagem");
-                
-       
 
            CadastroProdutoForm cadastroProdutoForm = new CadastroProdutoForm(nomeProduto, categoria, fichaTecnica, preco);
         
